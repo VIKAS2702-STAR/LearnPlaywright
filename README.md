@@ -38,6 +38,17 @@ LearnPlaywright/
 │   ├── VS_Code_Keyboard_Shortcut_windows.md  # VS Code shortcuts for Windows
 │   └── VS_Code_Keyboard_Shortcut_mac.md      # VS Code shortcuts for macOS
 │
+├── Chapter_04_Javascript_Concept/
+│   ├── 09_var_let_const.js                   # var, let, const comparison
+│   ├── 10_function.js                          # Functions in JavaScript
+│   ├── 11_var_explained.js                   # Deep dive into var
+│   ├── 12_let_people_love.js               # Deep dive into let
+│   ├── 13_const_explained.js               # Deep dive into const
+│   ├── 14_var_functionscope.js             # var function scope behavior
+│   ├── 15_let_scope.js                     # let block scope behavior
+│   ├── 16_Hoisting.js                        # Hoisting concept
+│   └── 17_Hoisting_function.js             # Function hoisting
+│
 └── README.md                                 # This file
 ```
 
@@ -90,6 +101,13 @@ Master the art of naming variables and functions:
 - **Comments:** Single-line, multi-line, and JSDoc-style comments
 - **VS Code Shortcuts:** Comprehensive keyboard shortcut references for both Windows and macOS
 
+### Chapter 04 — JavaScript Concepts
+Deep dive into core JavaScript concepts:
+- **var, let, const:** Variable declarations and their differences
+- **Functions:** Function declaration and usage
+- **Scope:** Function scope (var) vs block scope (let)
+- **Hoisting:** Variable and function hoisting behavior
+
 ---
 
 ## 🎯 Topics Covered
@@ -102,6 +120,10 @@ Master the art of naming variables and functions:
 | Naming Cases | camelCase, PascalCase, snake_case, kebab-case, flatcase, SCREAMING_SNAKE_CASE, etc. |
 | Comments | Code documentation best practices |
 | VS Code Shortcuts | Productivity boost with keyboard shortcuts |
+| Variable Declarations | var, let, const differences and best practices |
+| Functions | Function declarations and usage |
+| Scope | Function scope vs block scope |
+| Hoisting | Variable and function hoisting behavior |
 
 ---
 
