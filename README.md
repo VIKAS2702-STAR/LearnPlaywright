@@ -47,7 +47,21 @@ LearnPlaywright/
 │   ├── 14_var_functionscope.js             # var function scope behavior
 │   ├── 15_let_scope.js                     # let block scope behavior
 │   ├── 16_Hoisting.js                        # Hoisting concept
-│   └── 17_Hoisting_function.js             # Function hoisting
+│   ├── 17_Hoisting_function.js             # Function hoisting
+│   ├── 18_let_hoisting.js                  # let hoisting behavior
+│   ├── 19_let_hoisting_block.js          # let block hoisting
+│   ├── 20_let_const.js                   # let vs const comparison
+│   └── 21_jr_QA.js                       # Junior QA questions
+│
+├── Chapter_05_Literals/
+│   ├── 22_literal.js                       # Literals introduction
+│   ├── 23_null_undefined.js                # null vs undefined
+│   ├── 24_null.js                          # null literal
+│   ├── 25_literal_all.js                   # All literals overview
+│   ├── 26_Literal_Number_all.js            # Number literals
+│   ├── 27_String.js                        # Strings (single & double quotes)
+│   ├── 28_Template_Literal.js              # Template literals (backticks)
+│   └── 29_Backtick_single_double.js        # Backtick vs single/double quotes
 │
 └── README.md                                 # This file
 ```
@@ -108,6 +122,13 @@ Deep dive into core JavaScript concepts:
 - **Scope:** Function scope (var) vs block scope (let)
 - **Hoisting:** Variable and function hoisting behavior
 
+### Chapter 05 — Literals
+Explore JavaScript literals and data types:
+- **String Literals:** Single quotes, double quotes, and template literals (backticks)
+- **Number Literals:** Integer, float, binary, octal, and hexadecimal numbers
+- **null & undefined:** Understanding null and undefined values
+- **Template Literals:** String interpolation and multi-line strings with backticks
+
 ---
 
 ## 🎯 Topics Covered
@@ -124,6 +145,10 @@ Deep dive into core JavaScript concepts:
 | Functions | Function declarations and usage |
 | Scope | Function scope vs block scope |
 | Hoisting | Variable and function hoisting behavior |
+| String Literals | Single quotes, double quotes, backticks (template literals) |
+| Number Literals | Integer, float, binary, octal, hexadecimal |
+| null & undefined | Understanding null and undefined values |
+| Template Literals | String interpolation and multi-line strings |
 
 ---
 
