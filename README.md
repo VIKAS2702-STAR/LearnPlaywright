@@ -6,7 +6,9 @@
 
 ## 📖 About This Repository
 
-This repository is a structured learning journey covering JavaScript basics, identifier rules, naming conventions, and development tooling shortcuts. It is organized into chapters for progressive learning.
+This repository is a structured learning journey covering JavaScript basics, identifier rules, naming conventions, development tooling shortcuts, core JS concepts, literals, and operators. It is organized into chapters for progressive learning — from absolute beginner topics to more advanced comparisons and logical operations.
+
+Whether you are preparing for a QA automation role, brushing up on JS fundamentals, or learning Playwright, this repo serves as a hands-on reference.
 
 ---
 
@@ -63,6 +65,23 @@ LearnPlaywright/
 │   ├── 28_Template_Literal.js              # Template literals (backticks)
 │   └── 29_Backtick_single_double.js        # Backtick vs single/double quotes
 │
+├── Chapter_06_Double_Triple_Equal/
+│   ├── 30_Operators.js                     # Assignment operators
+│   ├── 31_Arithmatic_operator.js           # Arithmetic operators (+, -, *, /)
+│   ├── 32_Exponential_op.js                # Exponential operator (**)
+│   ├── 33_Modulus_op.js                    # Modulus operator (%)
+│   ├── 34_IQ.js                            # Compound operators (+=, -=, etc.)
+│   ├── 35_Comparision_op.js                # Comparison operators (>, <, >=, <=)
+│   ├── 36_Comparision_Strict_Loose.js      # Strict (===) vs Loose (==) equality
+│   ├── 37_IQ_Loose_Strict.js               # Tricky equality interview questions
+│   ├── 38_Confusing_Comparision.js         # Confusing comparisons and edge cases
+│   ├── 39_Logical_Op.js                    # Logical operators (&&, ||, !)
+│   ├── 40_String_Concatenation_Op.js       # String concatenation with +=
+│   ├── 41_Ternary_Op.js                    # Ternary operator placeholder
+│   ├── 42_Type_op.js                       # Type operator placeholder
+│   ├── 43_Increment_Decremet_op.js         # Increment/Decrement placeholder
+│   └── 44_Null_Op.js                       # Nullish operator placeholder
+│
 └── README.md                                 # This file
 ```
 
@@ -103,31 +122,78 @@ LearnPlaywright/
 ## 📚 Chapter Overview
 
 ### Chapter 01 — Basics of JavaScript
-Learn the foundational concepts of JavaScript including basic syntax, core concepts, environment setup verification, and performance-oriented code patterns.
+Learn the foundational concepts of JavaScript including basic syntax, core concepts, environment setup verification, and performance-oriented code patterns. This chapter sets the stage for understanding how JavaScript runs in Node.js and browsers.
+
+**Key takeaways:**
+- How to write and execute a `.js` file
+- Basic syntax and statements
+- Verifying your local development environment
 
 ### Chapter 02 — JavaScript Concepts
-Dive deeper into JavaScript fundamentals with additional examples and explanations.
+Dive deeper into JavaScript fundamentals with additional examples and explanations. This chapter bridges basic syntax with more complex ideas like control flow and data handling.
+
+**Key takeaways:**
+- Reinforcing fundamentals before moving to advanced topics
+- Understanding how JS engines process code
 
 ### Chapter 03 — Identifiers, Literals & Comments
 Master the art of naming variables and functions:
 - **Identifier Rules:** What makes a valid variable name in JS
+  - Must start with a letter, underscore (`_`), or dollar sign (`$`)
+  - Subsequent characters can also include digits (`0-9`)
+  - Cannot use reserved keywords (e.g., `let`, `class`, `return`)
 - **Naming Conventions:** camelCase, snake_case, PascalCase, SCREAMING_SNAKE_CASE, kebab-case, flatcase, Train-Case, COBOL-CASE, dromedaryCase, UpperCamelCase, Hungarian notation, dollarCase, and more
-- **Comments:** Single-line, multi-line, and JSDoc-style comments
-- **VS Code Shortcuts:** Comprehensive keyboard shortcut references for both Windows and macOS
+  - `camelCase` — used for variables and functions (`myVariableName`)
+  - `PascalCase` — used for classes and constructors (`MyClassName`)
+  - `snake_case` — common in Python, sometimes used in JS configs (`my_variable_name`)
+  - `SCREAMING_SNAKE_CASE` — used for constants (`MAX_SIZE`)
+  - `kebab-case` — used in HTML/CSS (`my-variable-name`)
+- **Comments:** Single-line (`//`), multi-line (`/* */`), and JSDoc-style comments
+- **VS Code Shortcuts:** Comprehensive keyboard shortcut references for both Windows and macOS to boost productivity
 
 ### Chapter 04 — JavaScript Concepts
-Deep dive into core JavaScript concepts:
+Deep dive into core JavaScript concepts that every developer and QA engineer must know:
 - **var, let, const:** Variable declarations and their differences
+  - `var` — function-scoped, can be re-declared and updated, hoisted with `undefined`
+  - `let` — block-scoped, can be updated but not re-declared in the same scope, hoisted but in Temporal Dead Zone (TDZ)
+  - `const` — block-scoped, cannot be updated or re-declared, must be initialized at declaration
 - **Functions:** Function declaration and usage
-- **Scope:** Function scope (var) vs block scope (let)
+  - Declarations vs expressions
+  - Parameters and return values
+- **Scope:** Function scope (`var`) vs block scope (`let`, `const`)
+  - Global scope, function scope, block scope, and lexical scope
 - **Hoisting:** Variable and function hoisting behavior
+  - `var` declarations are hoisted and initialized with `undefined`
+  - `let` and `const` are hoisted but not initialized (TDZ)
+  - Function declarations are hoisted with their definition
 
 ### Chapter 05 — Literals
 Explore JavaScript literals and data types:
-- **String Literals:** Single quotes, double quotes, and template literals (backticks)
-- **Number Literals:** Integer, float, binary, octal, and hexadecimal numbers
-- **null & undefined:** Understanding null and undefined values
-- **Template Literals:** String interpolation and multi-line strings with backticks
+- **String Literals:** Single quotes (`'Hello'`), double quotes (`"Hello"`), and template literals (backticks `` `Hello` ``)
+- **Number Literals:** Integer (`42`), float (`3.14`), binary (`0b1010`), octal (`0o755`), and hexadecimal (`0xFF`) numbers
+- **null & undefined:**
+  - `null` — an intentional absence of any object value (assigned by developer)
+  - `undefined` — a variable that has been declared but not assigned a value
+- **Template Literals:** String interpolation (`${variable}`) and multi-line strings with backticks
+- **Backtick vs Quotes:** When to use each — single/double for simple strings, backticks for interpolation and multi-line
+
+### Chapter 06 — Operators & Comparisons
+Understand how JavaScript performs calculations and comparisons:
+- **Assignment Operators:** `=` to assign values to variables
+- **Arithmetic Operators:** `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division)
+- **Exponential Operator:** `**` raises the left operand to the power of the right (`2 ** 3` → `8`)
+- **Modulus Operator:** `%` returns the remainder of division (`13 % 7` → `6`)
+  - Useful for checking even/odd: `n % 2 === 0` means even
+- **Compound Operators:** `+=`, `-=`, `*=`, `/=`, `%=` for shorthand updates (`x += 10` is `x = x + 10`)
+- **Comparison Operators:** `>`, `<`, `>=`, `<=` return boolean values
+- **Loose Equality (`==`):** Compares values after type coercion (can lead to unexpected results)
+- **Strict Equality (`===`):** Compares both value **and** type — **always prefer this**
+- **Logical Operators:** `&&` (AND), `||` (OR), `!` (NOT)
+- **String Concatenation:** Using `+=` to build strings dynamically
+- **Edge Cases & Interview Questions:** Common tricky comparisons like `0 == ""`, `null == undefined`, `[] == ![]`, and why `NaN !== NaN`
+
+**Best Practice:**
+> Always use `===` (strict equality) unless you explicitly need type coercion. Use `==` only when checking for both `null` and `undefined` together: `if (x == null)`.
 
 ---
 
@@ -135,26 +201,46 @@ Explore JavaScript literals and data types:
 
 | Topic | Description |
 |-------|-------------|
-| JavaScript Basics | Variables, data types, operators |
-| Core JS Concepts | Functions, loops, conditionals |
-| Identifiers | Naming rules and conventions |
+| JavaScript Basics | Variables, data types, basic syntax |
+| Core JS Concepts | Functions, loops, conditionals, execution flow |
+| Identifiers | Naming rules, reserved words, valid characters |
 | Naming Cases | camelCase, PascalCase, snake_case, kebab-case, flatcase, SCREAMING_SNAKE_CASE, etc. |
 | Comments | Code documentation best practices |
-| VS Code Shortcuts | Productivity boost with keyboard shortcuts |
-| Variable Declarations | var, let, const differences and best practices |
-| Functions | Function declarations and usage |
-| Scope | Function scope vs block scope |
-| Hoisting | Variable and function hoisting behavior |
+| VS Code Shortcuts | Productivity boost with keyboard shortcuts for Windows & macOS |
+| Variable Declarations | `var`, `let`, `const` — differences, scope, hoisting, TDZ |
+| Functions | Function declarations, expressions, parameters, return values |
+| Scope | Global, function, block, and lexical scope |
+| Hoisting | Variable and function hoisting behavior, Temporal Dead Zone |
 | String Literals | Single quotes, double quotes, backticks (template literals) |
 | Number Literals | Integer, float, binary, octal, hexadecimal |
-| null & undefined | Understanding null and undefined values |
+| null & undefined | Differences, use-cases, and common mistakes |
 | Template Literals | String interpolation and multi-line strings |
+| Assignment Operators | `=`, `+=`, `-=`, `*=`, `/=`, `%=` |
+| Arithmetic Operators | `+`, `-`, `*`, `/`, `**`, `%` |
+| Comparison Operators | `>`, `<`, `>=`, `<=`, `==`, `===`, `!=`, `!==` |
+| Loose vs Strict Equality | Type coercion, edge cases, best practices |
+| Logical Operators | `&&`, `\|\|`, `!` |
+| String Concatenation | Building strings with `+=` |
+| Tricky Comparisons | `NaN`, `null`, `undefined`, empty arrays, interview questions |
+
+---
+
+## 🛤️ Suggested Learning Path
+
+If you are new to JavaScript or preparing for QA automation, follow this order:
+
+1. **Chapter 01** → Get comfortable running JS files and basic syntax
+2. **Chapter 02** → Reinforce core concepts
+3. **Chapter 03** → Learn how to name things properly and use VS Code efficiently
+4. **Chapter 04** → Master variables, scope, and hoisting (critical for debugging)
+5. **Chapter 05** → Understand data types and literals deeply
+6. **Chapter 06** → Learn operators and comparisons thoroughly — this is where many bugs hide!
 
 ---
 
 ## ⌨️ VS Code Keyboard Shortcuts
 
-Quick references are available for both platforms:
+Quick references are available for both platforms to help you code faster:
 
 - [Windows Shortcuts](./Chapter_03_Identifier_Literals/VS_Code_Keyboard_Shortcut_windows.md)
 - [macOS Shortcuts](./Chapter_03_Identifier_Literals/VS_Code_Keyboard_Shortcut_mac.md)
@@ -169,13 +255,23 @@ Files in this repository follow a numbered chapter structure for easy navigation
 XX_DescriptiveName.js
 ```
 
-Where `XX` is a two-digit number indicating the learning sequence.
+Where `XX` is a two-digit number indicating the learning sequence. This makes it easy to follow the material in the intended order.
+
+---
+
+## 💡 Tips for Learning
+
+- **Run the code:** Don’t just read — execute every file with `node filename.js`
+- **Experiment:** Modify values and predict the output before running
+- **Take notes:** Write down confusing concepts, especially hoisting and `==` vs `===`
+- **Practice comparisons:** Chapter 06 has many edge cases — test them yourself
+- **Use the shortcuts:** Memorize a few VS Code shortcuts each day
 
 ---
 
 ## 🤝 Contributing
 
-This is a personal learning repository. Suggestions and improvements are welcome!
+This is a personal learning repository. Suggestions and improvements are welcome! Feel free to open an issue or pull request if you spot an error or want to add more examples.
 
 ---
 
