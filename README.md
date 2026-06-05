@@ -83,7 +83,10 @@ LearnPlaywright/
 │   ├── 44_Null_Op.js                       # Nullish coalescing operator (??)
 │   ├── 45_Post_Increment.js                # Post-increment deep dive
 │   ├── 46_IQ_Incre_Decre.js                # Increment/decrement interview questions
-│   └── 47_Advance_incre_decre.js           # Advanced increment/decrement expressions
+│   ├── 47_Advance_incre_decre.js           # Advanced increment/decrement expressions
+│   ├── 48_Max_Num_two_ternray.js           # Maximum of two numbers using ternary
+│   ├── 49_Max_Num_Three_Ternary_op.js      # Maximum of three numbers using ternary
+│   └── 50_Task_Ince_Decre_op.js            # Complex increment/decrement expression task
 │
 └── README.md                                 # This file
 ```
