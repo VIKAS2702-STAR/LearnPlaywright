@@ -77,10 +77,13 @@ LearnPlaywright/
 │   ├── 38_Confusing_Comparision.js         # Confusing comparisons and edge cases
 │   ├── 39_Logical_Op.js                    # Logical operators (&&, ||, !)
 │   ├── 40_String_Concatenation_Op.js       # String concatenation with +=
-│   ├── 41_Ternary_Op.js                    # Ternary operator placeholder
-│   ├── 42_Type_op.js                       # Type operator placeholder
-│   ├── 43_Increment_Decremet_op.js         # Increment/Decrement placeholder
-│   └── 44_Null_Op.js                       # Nullish operator placeholder
+│   ├── 41_Ternary_Op.js                    # Ternary operator (? :)
+│   ├── 42_Type_op.js                       # typeof operator
+│   ├── 43_Increment_Decremet_op.js         # Pre/Post increment and decrement
+│   ├── 44_Null_Op.js                       # Nullish coalescing operator (??)
+│   ├── 45_Post_Increment.js                # Post-increment deep dive
+│   ├── 46_IQ_Incre_Decre.js                # Increment/decrement interview questions
+│   └── 47_Advance_incre_decre.js           # Advanced increment/decrement expressions
 │
 └── README.md                                 # This file
 ```
@@ -190,7 +193,16 @@ Understand how JavaScript performs calculations and comparisons:
 - **Strict Equality (`===`):** Compares both value **and** type — **always prefer this**
 - **Logical Operators:** `&&` (AND), `||` (OR), `!` (NOT)
 - **String Concatenation:** Using `+=` to build strings dynamically
-- **Edge Cases & Interview Questions:** Common tricky comparisons like `0 == ""`, `null == undefined`, `[] == ![]`, and why `NaN !== NaN`
+- **Ternary Operator:** `condition ? valueIfTrue : valueIfFalse` for concise conditional expressions
+- **typeof Operator:** Returns the type of a value (`"string"`, `"number"`, `"boolean"`, `"undefined"`, `"object"`, etc.)
+- **Increment/Decrement Operators:**
+  - Pre-increment (`++a`) — increase first, then use the value
+  - Post-increment (`a++`) — use the value first, then increase
+  - Pre-decrement (`--a`) — decrease first, then use the value
+  - Post-decrement (`a--`) — use the value first, then decrease
+- **Nullish Coalescing Operator (`??`):** Returns the right-hand operand when the left is `null` or `undefined`
+  - Useful for providing default values: `let name = userInput ?? "Guest"`
+- **Edge Cases & Interview Questions:** Common tricky comparisons like `0 == ""`, `null == undefined`, `[] == ![]`, `NaN !== NaN`, and complex increment/decrement expressions
 
 **Best Practice:**
 > Always use `===` (strict equality) unless you explicitly need type coercion. Use `==` only when checking for both `null` and `undefined` together: `if (x == null)`.
@@ -220,6 +232,10 @@ Understand how JavaScript performs calculations and comparisons:
 | Comparison Operators | `>`, `<`, `>=`, `<=`, `==`, `===`, `!=`, `!==` |
 | Loose vs Strict Equality | Type coercion, edge cases, best practices |
 | Logical Operators | `&&`, `\|\|`, `!` |
+| Ternary Operator | Concise conditional expressions with `? :` |
+| typeof Operator | Checking data types at runtime |
+| Increment/Decrement | Pre (`++a`, `--a`) and post (`a++`, `a--`) operators |
+| Nullish Coalescing | `??` for default values when `null` or `undefined` |
 | String Concatenation | Building strings with `+=` |
 | Tricky Comparisons | `NaN`, `null`, `undefined`, empty arrays, interview questions |
 
