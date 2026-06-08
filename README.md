@@ -88,6 +88,35 @@ LearnPlaywright/
 │   ├── 49_Max_Num_Three_Ternary_op.js      # Maximum of three numbers using ternary
 │   └── 50_Task_Ince_Decre_op.js            # Complex increment/decrement expression task
 │
+├── Chapter_07_If_Else/
+│   ├── 51_If_Else.js                       # if / else conditional basics
+│   ├── 52_If_ElseIf_Else.js                # if / else if / else chains
+│   ├── 53_Real_Ex_If_Else.js               # Real-world if/else examples
+│   ├── 54_API_If_Else.js                   # API response handling with if/else
+│   ├── 55_IQ_If_Else.js                    # Interview questions using if/else
+│   ├── 56_Real_Example_If_Else.js          # Additional real-world examples
+│   ├── 57_IQ.js                            # If/else interview questions
+│   ├── 58_If_Else.js                       # More if/else practice
+│   ├── 59_IQ_Even_Odd.js                   # Even / odd check (if/else)
+│   ├── 60_IQ_Grade_Calculator.js           # Grade calculator (if/else)
+│   └── 61_IQ_Leap_Year.js                  # Leap year checker (if/else)
+│
+├── Chapter_08_Switch_Statement/
+│   ├── 62_Switch.js                        # switch statement basics
+│   ├── 63_No_Break.js                      # Switch without break (fall-through)
+│   ├── 64_Default.js                       # Default case in switch
+│   ├── 65_Real_Example.js                  # Real-world switch examples
+│   ├── 66_Switch_Group.js                  # Grouped cases in switch
+│   ├── 67_IQ.js                            # Switch interview questions
+│   ├── 68_IQ2.js                           # Switch interview questions 2
+│   ├── 69_IQ3.js                           # Switch interview questions 3
+│   └── 70_IQ4.js                           # Switch interview questions 4
+│
+├── Chapter_09_UserInput/
+│   ├── 71_User_Input.js                    # User input basics
+│   ├── 72_Node_Readline.js                 # Readline input in Node.js
+│   └── 73_Prompt_Sync.js                   # Synchronous prompt input
+│
 └── README.md                                 # This file
 ```
 
@@ -210,6 +239,30 @@ Understand how JavaScript performs calculations and comparisons:
 **Best Practice:**
 > Always use `===` (strict equality) unless you explicitly need type coercion. Use `==` only when checking for both `null` and `undefined` together: `if (x == null)`.
 
+### Chapter 07 — If/Else Statements
+Learn how to make decisions in code using `if`, `else if`, and `else` statements. This chapter covers basic conditional logic, chained conditions, real-world examples, API response handling, and classic interview questions like even/odd checks, grade calculators, and leap year detection.
+
+**Key takeaways:**
+- How to structure `if`, `else if`, and `else` blocks
+- Real-world conditional logic for APIs and user input
+- Solving interview questions with conditionals
+
+### Chapter 08 — Switch Statements
+Understand the `switch` statement as an alternative to long `if/else` chains. Explore cases with and without `break`, default handling, grouped cases, and real-world switch examples. Also includes multiple interview question sets for mastering switch behavior.
+
+**Key takeaways:**
+- When to use `switch` vs `if/else`
+- How fall-through behavior works (and when to avoid it)
+- Grouping multiple cases for shared logic
+
+### Chapter 09 — User Input
+Learn how to capture user input in Node.js applications. Covers basic input concepts, `readline` module for asynchronous input, and `prompt-sync` for synchronous input. This chapter bridges the gap between static scripts and interactive CLI tools.
+
+**Key takeaways:**
+- Reading user input with `readline`
+- Synchronous input with `prompt-sync`
+- Building interactive CLI scripts
+
 ---
 
 ## 🎯 Topics Covered
@@ -241,6 +294,9 @@ Understand how JavaScript performs calculations and comparisons:
 | Nullish Coalescing | `??` for default values when `null` or `undefined` |
 | String Concatenation | Building strings with `+=` |
 | Tricky Comparisons | `NaN`, `null`, `undefined`, empty arrays, interview questions |
+| If/Else Statements | Conditional logic, branching, real-world examples |
+| Switch Statements | `switch`, `case`, `break`, `default`, grouped cases |
+| User Input | `readline`, `prompt-sync`, interactive CLI programs |
 
 ---
 
@@ -254,6 +310,9 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
 4. **Chapter 04** → Master variables, scope, and hoisting (critical for debugging)
 5. **Chapter 05** → Understand data types and literals deeply
 6. **Chapter 06** → Learn operators and comparisons thoroughly — this is where many bugs hide!
+7. **Chapter 07** → Master conditional logic with `if/else` statements
+8. **Chapter 08** → Explore `switch` statements for cleaner multi-branch logic
+9. **Chapter 09** → Learn to build interactive CLI programs with user input
 
 ---
 
