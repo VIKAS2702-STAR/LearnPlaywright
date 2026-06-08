@@ -7,7 +7,7 @@ switch ( day ) {
         console.log( "Sunday --- Rest Day" );
         break;
     case 1:
-        console.log( "Monday ---- Sprint Planning " );
+        console.log( "Monday ---- Sprint Planning" );
         break;
     case 2:
         console.log( "Tuesday --- Developement" );

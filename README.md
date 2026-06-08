@@ -17,6 +17,13 @@ Whether you are preparing for a QA automation role, brushing up on JS fundamenta
 ```
 LearnPlaywright/
 │
+├── Chapter_00_Javascript_Task/
+│   ├── 01_IQ1.js                           # HTTP status code checker
+│   ├── 02_IQ2.js                           # Test pass/fail verdict checker
+│   ├── 03_IQ3.js                           # Bug severity classifier
+│   ├── 04_IQ4.js                           # CI build health reporter
+│   └── 05_IQ5.js                           # Login lockout tracker
+│
 ├── Chapter_01_BasicsJS/
 │   ├── 01_Basics.js                          # JavaScript basics introduction
 │   ├── 02_JS.js                              # Core JavaScript concepts
@@ -156,6 +163,16 @@ LearnPlaywright/
 
 ## 📚 Chapter Overview
 
+### Chapter 00 — JavaScript Tasks
+Hands-on JavaScript exercises designed for QA and automation scenarios. These practical tasks bridge fundamental concepts with real-world testing situations, including API response handling, test verdict checking, bug severity classification, CI build health monitoring, and security logic like login lockout.
+
+**Key takeaways:**
+- Checking HTTP status code categories (200, 300, 400, 500)
+- Comparing expected vs actual results to print test verdicts
+- Classifying bug severity based on impact scores
+- Reporting CI build health from test pass percentages
+- Implementing login lockout logic after failed attempts
+
 ### Chapter 01 — Basics of JavaScript
 Learn the foundational concepts of JavaScript including basic syntax, core concepts, environment setup verification, and performance-oriented code patterns. This chapter sets the stage for understanding how JavaScript runs in Node.js and browsers.
 
@@ -269,6 +286,7 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 
 | Topic | Description |
 |-------|-------------|
+| QA Scenarios & Tasks | HTTP status codes, test verdicts, bug severity, build health, login lockout |
 | JavaScript Basics | Variables, data types, basic syntax |
 | Core JS Concepts | Functions, loops, conditionals, execution flow |
 | Identifiers | Naming rules, reserved words, valid characters |
@@ -304,15 +322,16 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 
 If you are new to JavaScript or preparing for QA automation, follow this order:
 
-1. **Chapter 01** → Get comfortable running JS files and basic syntax
-2. **Chapter 02** → Reinforce core concepts
-3. **Chapter 03** → Learn how to name things properly and use VS Code efficiently
-4. **Chapter 04** → Master variables, scope, and hoisting (critical for debugging)
-5. **Chapter 05** → Understand data types and literals deeply
-6. **Chapter 06** → Learn operators and comparisons thoroughly — this is where many bugs hide!
-7. **Chapter 07** → Master conditional logic with `if/else` statements
-8. **Chapter 08** → Explore `switch` statements for cleaner multi-branch logic
-9. **Chapter 09** → Learn to build interactive CLI programs with user input
+1. **Chapter 00** → Start with practical QA-oriented JavaScript tasks to warm up
+2. **Chapter 01** → Get comfortable running JS files and basic syntax
+3. **Chapter 02** → Reinforce core concepts
+4. **Chapter 03** → Learn how to name things properly and use VS Code efficiently
+5. **Chapter 04** → Master variables, scope, and hoisting (critical for debugging)
+6. **Chapter 05** → Understand data types and literals deeply
+7. **Chapter 06** → Learn operators and comparisons thoroughly — this is where many bugs hide!
+8. **Chapter 07** → Master conditional logic with `if/else` statements
+9. **Chapter 08** → Explore `switch` statements for cleaner multi-branch logic
+10. **Chapter 09** → Learn to build interactive CLI programs with user input
 
 ---
 
