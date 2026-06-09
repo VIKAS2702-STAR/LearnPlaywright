@@ -124,8 +124,36 @@ LearnPlaywright/
 │   ├── 72_Node_Readline.js                 # Readline input in Node.js
 │   └── 73_Prompt_Sync.js                   # Synchronous prompt input
 │
+├── Chapter_10_Loops/
+│   ├── 74_For_Loops.js                     # For loop basics
+│   ├── 75_For_Loops.js                     # For loop examples
+│   ├── 76_For_Loop2.js                     # For loop with different variables
+│   ├── 77_IQ.js                            # For loop interview questions
+│   ├── 78_For_OF_IN_Each                   # For...of / for...in / forEach placeholder
+│   ├── 79_While_Loop.js                    # While loop basics
+│   ├── 80_Do_While_Loop.js                 # Do...while loop basics
+│   ├── 81_Do_While_Loop.js                 # Do...while loop examples
+│   ├── 82_IQ.js                            # While loop interview questions (countdown)
+│   ├── 83_IQ.js                            # Do...while loop interview questions
+│   ├── 84_IQ.js                            # Continue statement in loops
+│   └── 85_IQ.js                            # Do...while loop edge cases
+│
 └── README.md                                 # This file
 ```
+
+### Chapter 10 — Loops
+Master the different ways to repeat code in JavaScript:
+- **For Loop:** The classic loop with initialization, condition, and increment (`for (let i = 0; i < 10; i++)`)
+- **While Loop:** Executes a block as long as a condition is true (`while (condition)`)
+- **Do...While Loop:** Executes the block at least once before checking the condition (`do { ... } while (condition)`)
+- **Loop Control:** Using `continue` to skip iterations and understanding loop exit conditions
+- **Interview Questions:** Countdown patterns, edge cases with `do...while`, and infinite loop scenarios
+
+**Key takeaways:**
+- How to choose between `for`, `while`, and `do...while`
+- Understanding loop initialization, condition, and update
+- Common loop pitfalls and how to avoid them
+- Practice with real loop-based interview questions
 
 ---
 
@@ -315,6 +343,8 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | If/Else Statements | Conditional logic, branching, real-world examples |
 | Switch Statements | `switch`, `case`, `break`, `default`, grouped cases |
 | User Input | `readline`, `prompt-sync`, interactive CLI programs |
+| Loops | `for`, `while`, `do...while`, loop control, `continue` |
+| Loop Interview Questions | Countdown, edge cases, infinite loops, do...while behavior |
 
 ---
 
@@ -332,6 +362,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
 8. **Chapter 07** → Master conditional logic with `if/else` statements
 9. **Chapter 08** → Explore `switch` statements for cleaner multi-branch logic
 10. **Chapter 09** → Learn to build interactive CLI programs with user input
+11. **Chapter 10** → Master loops — `for`, `while`, and `do...while` — for repetitive tasks
 
 ---
 
