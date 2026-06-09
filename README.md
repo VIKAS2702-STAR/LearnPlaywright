@@ -136,7 +136,9 @@ LearnPlaywright/
 │   ├── 82_IQ.js                            # While loop interview questions (countdown)
 │   ├── 83_IQ.js                            # Do...while loop interview questions
 │   ├── 84_IQ.js                            # Continue statement in loops
-│   └── 85_IQ.js                            # Do...while loop edge cases
+│   ├── 85_IQ.js                            # Do...while loop edge cases
+│   ├── 86_Task.js                          # Triangle classifier (loop + if/else task)
+│   └── 87_Task2.js                         # FizzBuzz classic loop challenge
 │
 └── README.md                                 # This file
 ```
@@ -148,12 +150,13 @@ Master the different ways to repeat code in JavaScript:
 - **Do...While Loop:** Executes the block at least once before checking the condition (`do { ... } while (condition)`)
 - **Loop Control:** Using `continue` to skip iterations and understanding loop exit conditions
 - **Interview Questions:** Countdown patterns, edge cases with `do...while`, and infinite loop scenarios
+- **Practical Tasks:** Triangle classifier combining loops with conditionals, and the classic FizzBuzz challenge
 
 **Key takeaways:**
 - How to choose between `for`, `while`, and `do...while`
 - Understanding loop initialization, condition, and update
 - Common loop pitfalls and how to avoid them
-- Practice with real loop-based interview questions
+- Practice with real loop-based interview questions and algorithmic tasks
 
 ---
 
