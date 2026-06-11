@@ -140,6 +140,17 @@ LearnPlaywright/
 │   ├── 86_Task.js                          # Triangle classifier (loop + if/else task)
 │   └── 87_Task2.js                         # FizzBuzz classic loop challenge
 │
+├── Chapter_11_Arrays/
+│   ├── 88_Arrays.js                        # Array basics and introduction
+│   ├── 89_Arrays.js                        # Creating arrays (literal, constructor, Array.of, Array.from)
+│   ├── 90_Access_Array.js                  # Accessing and modifying array elements
+│   ├── 91_Arrays_Adding_Removing.js        # Adding and removing elements (push, pop, unshift, shift)
+│   ├── 92_Arrays_Adding_Removing2.js       # Splice for adding, removing, and replacing elements
+│   ├── 93_Real_Example.js                  # Real-world array example with browser list
+│   ├── 94_Searching.js                     # Searching arrays (indexOf, lastIndexOf, includes, find, findIndex)
+│   ├── 95_Iterate.js                       # Iterating arrays (for, for...of, forEach, for...in, entries)
+│   └── 96_Transform.Array.js               # Transforming arrays (map, filter, reduce, flat)
+│
 └── README.md                                 # This file
 ```
 
@@ -157,6 +168,23 @@ Master the different ways to repeat code in JavaScript:
 - Understanding loop initialization, condition, and update
 - Common loop pitfalls and how to avoid them
 - Practice with real loop-based interview questions and algorithmic tasks
+
+### Chapter 11 — Arrays
+Learn how to work with JavaScript arrays — one of the most important data structures for automation and testing. This chapter covers creating arrays, accessing and modifying elements, adding and removing items, searching, iterating, and transforming arrays.
+
+- **Creating Arrays:** Array literals, `new Array()`, `Array.of()`, and `Array.from()`
+- **Accessing & Modifying:** Reading by index, using `.at()` for negative indexing, and updating values
+- **Adding & Removing:** `push()` and `pop()` for the end, `unshift()` and `shift()` for the beginning, `splice()` for middle operations
+- **Searching:** `indexOf()`, `lastIndexOf()`, `includes()`, `find()`, `findIndex()`, `findLast()`, `findLastIndex()`
+- **Iterating:** `for` loop, `for...of`, `forEach()`, `for...in`, and `entries()`
+- **Transforming:** `map()` to transform every element, `filter()` to keep matching elements, `reduce()` to accumulate to a single value, and `flat()` to flatten nested arrays
+
+**Key takeaways:**
+- Arrays can hold any data type and are zero-indexed
+- Choosing the right method for adding, removing, or replacing elements
+- Searching arrays efficiently with built-in methods
+- Using `for...of` and `forEach` for clean iteration
+- Leveraging `map`, `filter`, and `reduce` for powerful data transformations
 
 ---
 
@@ -348,6 +376,10 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | User Input | `readline`, `prompt-sync`, interactive CLI programs |
 | Loops | `for`, `while`, `do...while`, loop control, `continue` |
 | Loop Interview Questions | Countdown, edge cases, infinite loops, do...while behavior |
+| Arrays | Creating, accessing, modifying, adding, removing elements |
+| Array Searching | `indexOf`, `lastIndexOf`, `includes`, `find`, `findIndex`, `findLast`, `findLastIndex` |
+| Array Iteration | `for`, `for...of`, `forEach`, `for...in`, `entries` |
+| Array Transformation | `map`, `filter`, `reduce`, `flat` |
 
 ---
 
@@ -366,6 +398,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
 9. **Chapter 08** → Explore `switch` statements for cleaner multi-branch logic
 10. **Chapter 09** → Learn to build interactive CLI programs with user input
 11. **Chapter 10** → Master loops — `for`, `while`, and `do...while` — for repetitive tasks
+12. **Chapter 11** → Master arrays — creating, searching, iterating, and transforming data collections
 
 ---
 
