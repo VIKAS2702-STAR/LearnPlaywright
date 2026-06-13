@@ -149,7 +149,21 @@ LearnPlaywright/
 │   ├── 93_Real_Example.js                  # Real-world array example with browser list
 │   ├── 94_Searching.js                     # Searching arrays (indexOf, lastIndexOf, includes, find, findIndex)
 │   ├── 95_Iterate.js                       # Iterating arrays (for, for...of, forEach, for...in, entries)
-│   └── 96_Transform.Array.js               # Transforming arrays (map, filter, reduce, flat)
+│   ├── 96_Transform.Array.js               # Transforming arrays (map, filter, reduce, flat)
+│   ├── 97_Array_sort.js                    # Sorting arrays (sort, numeric sort with compare function)
+│   ├── 98_Array_Slicing.js                 # Slicing and combining arrays (slice, splice)
+│   ├── 99_Concat_Array.js                  # Concatenating arrays (concat, spread operator, join)
+│   └── 100_Checking_Array.js               # Checking arrays (isArray, every, some)
+│
+├── Chapter_12_Function/
+│   ├── 101_Function.js                     # Functions introduction
+│   ├── 102_Type1_Basic_Function.js         # Type 1: Basic function without parameters
+│   ├── 103_Typ2_fun_with_Parameter_No_Return.js  # Type 2: Function with parameters but no return
+│   ├── 104_Type3_Fun_without_Para_Return.js      # Type 3: Function without parameters but with return
+│   ├── 105_Type4_Fun_With_Param_With_Return.js   # Type 4: Function with parameters and return
+│   ├── 106_Template_Literal.js             # Using template literals in functions
+│   ├── 107_Function_Expression.js          # Function expressions (anonymous functions)
+│   └── 108_Arrow_Function.js               # Arrow functions (ES6 concise syntax)
 │
 └── README.md                                 # This file
 ```
@@ -185,6 +199,38 @@ Learn how to work with JavaScript arrays — one of the most important data stru
 - Searching arrays efficiently with built-in methods
 - Using `for...of` and `forEach` for clean iteration
 - Leveraging `map`, `filter`, and `reduce` for powerful data transformations
+
+### Chapter 11 (Continued) — Sorting, Slicing, Concatenating & Checking Arrays
+Continue mastering arrays with practical operations every developer and QA engineer needs:
+
+- **Sorting:** `sort()` for alphabetical sorting, numeric sort with compare functions `(a, b) => a - b` for ascending and `(a, b) => b - a` for descending
+- **Slicing & Splicing:** `slice(start, end)` returns a new subarray without mutating the original; `splice(index, count)` removes elements in-place
+- **Concatenating:** `concat()` for merging arrays, the modern spread operator `[...a, ...b]` for elegant combination, and `join()` for creating delimited strings
+- **Checking Arrays:** `Array.isArray()` to verify array types, `every()` to confirm all elements pass a test, and `some()` to check if at least one element passes
+
+**Key takeaways:**
+- `sort()` sorts alphabetically by default — use a compare function for numbers
+- `slice()` does not mutate; `splice()` does mutate the original array
+- Spread syntax (`...`) is the modern, preferred way to concatenate arrays
+- `every()` and `some()` are powerful for validation and assertion patterns in QA
+
+### Chapter 12 — Functions
+Master JavaScript functions — the building blocks of reusable code. This chapter covers all function types, from basic declarations to modern ES6 arrow functions.
+
+- **Function Basics:** Defining and calling functions with `function` keyword
+- **Type 1 — No Parameters:** Simple functions that execute fixed logic (`greet()`)
+- **Type 2 — With Parameters, No Return:** Functions that accept inputs and log or act on them (`greetByName(name)`)
+- **Type 3 — No Parameters, With Return:** Functions that compute and return a value without needing input (`goToRelativeHouse()`)
+- **Type 4 — With Parameters and Return:** The most common pattern — accept inputs, process them, and return a result (`sumOfTwoNumber(a, b)`)
+- **Template Literals in Functions:** Using backticks and `${variable}` interpolation to build dynamic return strings
+- **Function Expressions:** Storing anonymous functions in variables (`const greet = function(name) { ... }`)
+- **Arrow Functions:** Concise ES6 syntax — removing `function`, `return`, and `{}` for clean one-liners (`const doubleIt = n => n * 2`)
+
+**Key takeaways:**
+- Functions enable code reuse and modularity
+- Parameters are inputs; `return` is the output
+- Arrow functions provide a shorter, cleaner syntax for simple operations
+- Use function expressions when you need to pass functions as arguments or assign them to variables
 
 ---
 
@@ -380,6 +426,14 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Array Searching | `indexOf`, `lastIndexOf`, `includes`, `find`, `findIndex`, `findLast`, `findLastIndex` |
 | Array Iteration | `for`, `for...of`, `forEach`, `for...in`, `entries` |
 | Array Transformation | `map`, `filter`, `reduce`, `flat` |
+| Array Sorting | `sort()`, numeric compare functions, ascending & descending order |
+| Array Slicing & Splicing | `slice()` (non-mutating), `splice()` (mutating) |
+| Array Concatenation | `concat()`, spread operator (`...`), `join()` |
+| Array Checking | `Array.isArray()`, `every()`, `some()` |
+| Functions | Defining, calling, parameters, return values |
+| Function Types | No parameters, with parameters, with return, without return |
+| Function Expressions | Anonymous functions assigned to variables |
+| Arrow Functions | ES6 concise syntax (`=>`), implicit returns |
 
 ---
 
@@ -399,6 +453,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
 10. **Chapter 09** → Learn to build interactive CLI programs with user input
 11. **Chapter 10** → Master loops — `for`, `while`, and `do...while` — for repetitive tasks
 12. **Chapter 11** → Master arrays — creating, searching, iterating, and transforming data collections
+13. **Chapter 12** → Master functions — parameters, return values, expressions, and arrow functions
 
 ---
 
