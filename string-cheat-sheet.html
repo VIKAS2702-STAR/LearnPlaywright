@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods - Cheat Sheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            padding: 2rem;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        .category {
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            background: #4a5568;
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: #edf2f7;
+            color: #2d3748;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.95rem;
+        }
+        tr:hover {
+            background: #f7fafc;
+        }
+        .method {
+            color: #3182ce;
+            font-weight: 600;
+            font-family: 'Courier New', monospace;
+            white-space: nowrap;
+        }
+        .example {
+            color: #38a169;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .returns {
+            color: #805ad5;
+            font-weight: 500;
+        }
+        .legend {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .legend h2 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .legend ul {
+            list-style: none;
+            padding: 0;
+        }
+        .legend li {
+            padding: 0.5rem 0;
+            color: #4a5568;
+        }
+        .legend code {
+            background: #edf2f7;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript String Methods Cheat Sheet</h1>
+        <p class="subtitle">All 40+ string methods with one-line examples</p>
+
+        <div class="category">
+            <div class="category-title">📏 Properties & Length</div>
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Example</th>
+                    <th>Result</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td class="method">length</td>
+                    <td class="example">"Hello".length</td>
+                    <td class="returns">5</td>
+                    <td>Returns the number of characters in the string</td>
+                </tr>
+                <tr>
+                    <td class="method">constructor</td>
+                    <td class="example">"Hello".constructor</td>
+                    <td class="returns">String</td>
+                    <td>Returns the function that created the string</td>
+                </tr>
+                <tr>
+                    <td class="method">prototype</td>
+                    <td class="example">String.prototype</td>
+                    <td class="returns">object</td>
+                    <td>Allows adding properties to string objects</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="category">
+            <div class="category-title">🔍 Search & Check Methods</div>
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Example</th>
+                    <th>Result</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td class="method">indexOf()</td>
+                    <td class="example">"Hello World".indexOf("o")</td>
+                    <td class="returns">4</td>
+                    <td>First occurrence index of substring (-1 if not found)</td>
+                </tr>
+                <tr>
+                    <td class="method">lastIndexOf()</td>
+                    <td class="example">"Hello World".lastIndexOf("o")</td>
+                    <td class="returns">7</td>
+                    <td>Last occurrence index of substring (-1 if not found)</td>
+                </tr>
+                <tr>
+                    <td class="method">search()</td>
+                    <td class="example">"Hello World".search(/o/)</td>
+                    <td class="returns">4</td>
+                    <td>Search with regex, returns first match index</td>
+                </tr>
+                <tr>
+                    <td class="method">match()</td>
+                    <td class="example">"Hello World".match(/o/g)</td>
+                    <td class="returns">["o","o"]</td>
+                    <td>Returns array of all regex matches</td>
+                </tr>
+                <tr>
+                    <td class="method">matchAll()</td>
+                    <td class="example">[..."Hello World".matchAll(/o/g)]</td>
+                    <td class="returns">[iterator]</td>
+                    <td>Returns iterator of all regex match results</td>
+                </tr>
+                <tr>
+                    <td class="method">includes()</td>
+                    <td class="example">"Hello World".includes("World")</td>
+                    <td class="returns">true</td>
+                    <td>Checks if string contains substring</td>
+                </tr>
+                <tr>
+                    <td class="method">startsWith()</td>
+                    <td class="example">"Hello World".startsWith("Hello")</td>
+                    <td class="returns">true</td>
+                    <td>Checks if string starts with substring</td>
+                </tr>
+                <tr>
+                    <td class="method">endsWith()</td>
+                    <td class="example">"Hello World".endsWith("World")</td>
+                    <td class="returns">true</td>
+                    <td>Checks if string ends with substring</td>
+                </tr>
+                <tr>
+                    <td class="method">localeCompare()</td>
+                    <td class="example">"a".localeCompare("b")</td>
+                    <td class="returns">-1</td>
+                    <td>Compares two strings in locale</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="category">
+            <div class="category-title">✂️ Extract & Slice Methods</div>
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Example</th>
+                    <th>Result</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td class="method">slice()</td>
+                    <td class="example">"Hello World".slice(0, 5)</td>
+                    <td class="returns">"Hello"</td>
+                    <td>Extracts section from start to end (not incl.)</td>
+                </tr>
+                <tr>
+                    <td class="method">substring()</td>
+                    <td class="example">"Hello World".substring(0, 5)</td>
+                    <td class="returns">"Hello"</td>
+                    <td>Extracts between two indices (swaps if start > end)</td>
+                </tr>
+                <tr>
+                    <td class="method">substr()</td>
+                    <td class="example">"Hello World".substr(6, 5)</td>
+                    <td class="returns">"World"</td>
+                    <td>Extracts length characters from start (deprecated)</td>
+                </tr>
+                <tr>
+                    <td class="method">charAt()</td>
+                    <td class="example">"Hello".charAt(1)</td>
+                    <td class="returns">"e"</td>
+                    <td>Returns character at specified index</td>
+                </tr>
+                <tr>
+                    <td class="method">charCodeAt()</td>
+                    <td class="example">"Hello".charCodeAt(0)</td>
+                    <td class="returns">72</td>
+                    <td>Returns Unicode of character at index</td>
+                </tr>
+                <tr>
+                    <td class="method">codePointAt()</td>
+                    <td class="example">"Hello".codePointAt(0)</td>
+                    <td class="returns">72</td>
+                    <td>Returns full Unicode code point at index</td>
+                </tr>
+                <tr>
+                    <td class="method">at()</td>
+                    <td class="example">"Hello".at(-1)</td>
+                    <td class="returns">"o"</td>
+                    <td>Returns character at index (supports negative)</td>
+                </tr>
+                <tr>
+                    <td class="method">split()</td>
+                    <td class="example">"Hello World".split(" ")</td>
+                    <td class="returns">["Hello","World"]</td>
+                    <td>Splits string into array by separator</td>
+                </tr>
+                <tr>
+                    <td class="method">concat()</td>
+                    <td class="example">"Hello".concat(" ", "World")</td>
+                    <td class="returns">"Hello World"</td>
+                    <td>Joins two or more strings</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="category">
+            <div class="category-title">🔄 Transform & Modify Methods</div>
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Example</th>
+                    <th>Result</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td class="method">toUpperCase()</td>
+                    <td class="example">"hello".toUpperCase()</td>
+                    <td class="returns">"HELLO"</td>
+                    <td>Converts string to uppercase</td>
+                </tr>
+                <tr>
+                    <td class="method">toLowerCase()</td>
+                    <td class="example">"HELLO".toLowerCase()</td>
+                    <td class="returns">"hello"</td>
+                    <td>Converts string to lowercase</td>
+                </tr>
+                <tr>
+                    <td class="method">trim()</td>
+                    <td class="example">"  hello  ".trim()</td>
+                    <td class="returns">"hello"</td>
+                    <td>Removes whitespace from both ends</td>
+                </tr>
+                <tr>
+                    <td class="method">trimStart()</td>
+                    <td class="example">"  hello  ".trimStart()</td>
+                    <td class="returns">"hello  "</td>
+                    <td>Removes whitespace from start only</td>
+                </tr>
+                <tr>
+                    <td class="method">trimEnd()</td>
+                    <td class="example">"  hello  ".trimEnd()</td>
+                    <td class="returns">"  hello"</td>
+                    <td>Removes whitespace from end only</td>
+                </tr>
+                <tr>
+                    <td class="method">trimLeft()</td>
+                    <td class="example">"  hello  ".trimLeft()</td>
+                    <td class="returns">"hello  "</td>
+                    <td>Alias of trimStart()</td>
+                </tr>
+                <tr>
+                    <td class="method">trimRight()</td>
+                    <td class="example">"  hello  ".trimRight()</td>
+                    <td class="returns">"  hello"</td>
+                    <td>Alias of trimEnd()</td>
+                </tr>
+                <tr>
+                    <td class="method">padStart()</td>
+                    <td class="example">"5".padStart(3, "0")</td>
+                    <td class="returns">"005"</td>
+                    <td>Pads string from start to given length</td>
+                </tr>
+                <tr>
+                    <td class="method">padEnd()</td>
+                    <td class="example">"5".padEnd(3, "0")</td>
+                    <td class="returns">"500"</td>
+                    <td>Pads string from end to given length</td>
+                </tr>
+                <tr>
+                    <td class="method">repeat()</td>
+                    <td class="example">"Hi".repeat(3)</td>
+                    <td class="returns">"HiHiHi"</td>
+                    <td>Repeats string specified number of times</td>
+                </tr>
+                <tr>
+                    <td class="method">replace()</td>
+                    <td class="example">"Hello World".replace("World", "JS")</td>
+                    <td class="returns">"Hello JS"</td>
+                    <td>Replaces first match with new string</td>
+                </tr>
+                <tr>
+                    <td class="method">replaceAll()</td>
+                    <td class="example">"Hello Hello".replaceAll("Hello", "Hi")</td>
+                    <td class="returns">"Hi Hi"</td>
+                    <td>Replaces all matches with new string</td>
+                </tr>
+                <tr>
+                    <td class="method">normalize()</td>
+                    <td class="example">"é".normalize("NFD")</td>
+                    <td class="returns">"é"</td>
+                    <td>Returns Unicode Normalization Form</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="category">
+            <div class="category-title">🔗 Conversion & Format Methods</div>
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Example</th>
+                    <th>Result</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td class="method">toString()</td>
+                    <td class="example">"hello".toString()</td>
+                    <td class="returns">"hello"</td>
+                    <td>Returns the string value</td>
+                </tr>
+                <tr>
+                    <td class="method">valueOf()</td>
+                    <td class="example">"hello".valueOf()</td>
+                    <td class="returns">"hello"</td>
+                    <td>Returns primitive value of string</td>
+                </tr>
+                <tr>
+                    <td class="method">toLocaleUpperCase()</td>
+                    <td class="example">"i".toLocaleUpperCase("tr")</td>
+                    <td class="returns">"İ"</td>
+                    <td>Locale-aware uppercase conversion</td>
+                </tr>
+                <tr>
+                    <td class="method">toLocaleLowerCase()</td>
+                    <td class="example">"İ".toLocaleLowerCase("tr")</td>
+                    <td class="returns">"i"</td>
+                    <td>Locale-aware lowercase conversion</td>
+                </tr>
+                <tr>
+                    <td class="method">[Symbol.iterator]</td>
+                    <td class="example">[..."Hello"]</td>
+                    <td class="returns">["H","e","l","l","o"]</td>
+                    <td>Makes string iterable (spreadable)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="category">
+            <div class="category-title">🆕 Static Methods (String.*)</div>
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Example</th>
+                    <th>Result</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td class="method">String.fromCharCode()</td>
+                    <td class="example">String.fromCharCode(72, 105)</td>
+                    <td class="returns">"Hi"</td>
+                    <td>Creates string from Unicode values</td>
+                </tr>
+                <tr>
+                    <td class="method">String.fromCodePoint()</td>
+                    <td class="example">String.fromCodePoint(72, 105)</td>
+                    <td class="returns">"Hi"</td>
+                    <td>Creates string from code points (handles emojis)</td>
+                </tr>
+                <tr>
+                    <td class="method">String.raw()</td>
+                    <td class="example">String.raw`\n`</td>
+                    <td class="returns">"\\n"</td>
+                    <td>Raw template string (no escaping)</td>
+                </tr>
+                <tr>
+                    <td class="method">String.fromCharCode() - Multiple</td>
+                    <td class="example">String.fromCharCode(0x1F600)</td>
+                    <td class="returns">"😀" (with surrogate)</td>
+                    <td>Creates emoji via surrogate pairs</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="legend">
+            <h2>💡 Quick Tips</h2>
+            <ul>
+                <li>🔹 <code>slice()</code> vs <code>substring()</code>: slice accepts negatives, substring doesn't</li>
+                <li>🔹 <code>substr()</code> is deprecated - use <code>substring()</code> or <code>slice()</code></li>
+                <li>🔹 <code>replace()</code> only replaces first match (use <code>replaceAll()</code> or regex with /g)</li>
+                <li>🔹 <code>match()</code> returns array for /g, or match object without /g</li>
+                <li>🔹 <code>search()</code> always returns index, unlike <code>match()</code></li>
+                <li>🔹 <code>indexOf()</code> and <code>includes()</code> are case-sensitive</li>
+                <li>🔹 <code>localeCompare()</code> is best for sorting strings alphabetically</li>
+                <li>🔹 Strings are immutable - all methods return new strings, don't modify original</li>
+                <li>🔹 <code>at()</code> is the modern way to get chars (supports negative indexing unlike charAt)</li>
+                <li>🔹 <code>String.raw</code> is great for file paths: <code>String.raw`C:\Users\name`</code></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

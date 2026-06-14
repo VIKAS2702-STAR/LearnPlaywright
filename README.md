@@ -179,8 +179,22 @@ LearnPlaywright/
   │   ├── 121_Higher_Order_Fn.js              # Higher-order functions (functions as arguments)
   │   └── 122_Pure_Function.js                # Pure vs impure functions
   │
-  └── README.md                                 # This file
-```
+  ├── Chapter_13_Strings/
+  │   ├── 123_Strings.js                        # Strings introduction and creation
+  │   ├── 124_String_Property.js                # String properties (length, constructor, prototype)
+  │   ├── 125_Search_Checking_str.js          # Search and checking methods (indexOf, includes, startsWith, etc.)
+  │   ├── 126_Substring.js                      # Extract and slice methods (slice, substring, split, etc.)
+  │   ├── 127_Transform_Str.js                  # Transform and modify methods (replace, trim, pad, etc.)
+  │   ├── 128_String_Conversion.js              # Conversion and format methods (toString, toUpperCase, etc.)
+  │   ├── 129_Task_String_Revers.js           # Task: Reverse a string
+  │   ├── 130_Task_String_Palindrom.js        # Task: Check if a string is a palindrome
+  │   ├── 131_Task_String_Anagram.js          # Task: Check if two strings are anagrams
+  │   ├── javascript_stringcheatsheet.md        # Markdown cheat sheet of all string methods
+  │   └── javascript_stringcheatsheet.html      # Interactive HTML table cheat sheet with search
+  │
+  ├── index.html                                  # API Login endpoint reference page
+  └── string-cheat-sheet.html                     # Standalone string methods cheat sheet
+  ```
 
 ### Chapter 10 — Loops
 Master the different ways to repeat code in JavaScript:
@@ -269,6 +283,30 @@ Dive deeper into modern and advanced function patterns that are essential for wr
 - Closures enable private state and are widely used in retry logic, caching, and module patterns
 - Higher-order functions are the backbone of functional programming and array iteration
 - Pure functions are easier to test, debug, and reason about — prefer them when possible
+
+### Chapter 13 — Strings
+Master JavaScript strings — one of the most frequently used data types in testing, automation, and UI validation. This chapter covers everything from creating strings to manipulating them with 50+ built-in methods.
+
+- **String Basics:** Creating strings with single quotes (`'Hello'`), double quotes (`"Hello"`), and template literals (backticks `` `Hello` ``)
+- **String Properties:** Accessing `length`, `constructor`, and `prototype`
+- **Search & Check Methods:** `indexOf()`, `lastIndexOf()`, `search()`, `match()`, `matchAll()`, `includes()`, `startsWith()`, `endsWith()`, `localeCompare()`
+- **Extract & Slice Methods:** `slice()`, `substring()`, `substr()`, `charAt()`, `charCodeAt()`, `codePointAt()`, `at()`, `split()`, `concat()`
+- **Transform & Modify Methods:** `toUpperCase()`, `toLowerCase()`, `trim()`, `trimStart()`, `trimEnd()`, `padStart()`, `padEnd()`, `repeat()`, `replace()`, `replaceAll()`, `normalize()`
+- **Conversion & Format Methods:** `toString()`, `valueOf()`, `toLocaleUpperCase()`, `toLocaleLowerCase()`, `Symbol.iterator`
+- **Static Methods:** `String.fromCharCode()`, `String.fromCodePoint()`, `String.raw()`
+- **Practical Tasks:** String reversal, palindrome checker, and anagram checker
+- **Cheat Sheets:** 
+  - [`javascript_stringcheatsheet.md`](./Chapter_13_Strings/javascript_stringcheatsheet.md) — Markdown reference table
+  - [`javascript_stringcheatsheet.html`](./Chapter_13_Strings/javascript_stringcheatsheet.html) — Interactive searchable HTML table
+
+**Key takeaways:**
+- Strings are immutable — all methods return new strings, never modify the original
+- `slice()` accepts negative indices; `substring()` does not
+- `at()` is the modern way to access characters (supports negative indexing unlike `charAt()`)
+- `replace()` only replaces the first match — use `replaceAll()` or regex with `/g` for global replacement
+- `String.raw` is perfect for file paths: ``String.raw`C:\Users\name` ``
+- Always prefer `===` for string comparisons, and `localeCompare()` for sorting
+- Use `trim()` to clean user input, and `padStart()`/`padEnd()` for formatting numbers and codes
 
 ---
 
@@ -480,6 +518,15 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Closures | Functions that retain access to their outer scope |
 | Higher-Order Functions | Functions that accept or return other functions |
 | Pure Functions | Predictable functions with no side effects |
+| String Basics | Creation with quotes, template literals, backticks |
+| String Properties | `length`, `constructor`, `prototype` |
+| String Search | `indexOf`, `lastIndexOf`, `search`, `match`, `matchAll`, `includes`, `startsWith`, `endsWith` |
+| String Extraction | `slice`, `substring`, `substr`, `charAt`, `charCodeAt`, `codePointAt`, `at`, `split`, `concat` |
+| String Transformation | `toUpperCase`, `toLowerCase`, `trim`, `trimStart`, `trimEnd`, `padStart`, `padEnd`, `repeat`, `replace`, `replaceAll` |
+| String Conversion | `toString`, `valueOf`, `toLocaleUpperCase`, `toLocaleLowerCase`, `Symbol.iterator` |
+| String Static Methods | `String.fromCharCode`, `String.fromCodePoint`, `String.raw` |
+| String Tasks | Reverse string, palindrome checker, anagram checker |
+| String Cheat Sheets | Markdown and HTML interactive reference tables |
 
 ---
 
@@ -500,6 +547,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
 11. **Chapter 10** → Master loops — `for`, `while`, and `do...while` — for repetitive tasks
 12. **Chapter 11** → Master arrays — creating, searching, iterating, and transforming data collections
 13. **Chapter 12** → Master functions — parameters, return values, expressions, arrow functions, IIFE, default parameters, rest/spread, closures, higher-order functions, and pure functions
+14. **Chapter 13** → Master strings — creation, search, extraction, transformation, and all 50+ built-in methods with practical tasks and cheat sheets
 
 ---
 
