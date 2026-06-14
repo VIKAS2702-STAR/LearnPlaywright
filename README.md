@@ -162,10 +162,24 @@ LearnPlaywright/
 │   ├── 104_Type3_Fun_without_Para_Return.js      # Type 3: Function without parameters but with return
 │   ├── 105_Type4_Fun_With_Param_With_Return.js   # Type 4: Function with parameters and return
 │   ├── 106_Template_Literal.js             # Using template literals in functions
-│   ├── 107_Function_Expression.js          # Function expressions (anonymous functions)
-│   └── 108_Arrow_Function.js               # Arrow functions (ES6 concise syntax)
-│
-└── README.md                                 # This file
+  │   ├── 107_Function_Expression.js          # Function expressions (anonymous functions)
+  │   ├── 108_Arrow_Function.js               # Arrow functions (ES6 concise syntax)
+  │   ├── 109_Arrow_Function_Real.js          # Real-world arrow function examples (API status validation)
+  │   ├── 110_IIFE.js                         # Immediately Invoked Function Expressions (IIFE)
+  │   ├── 111_Default_Param_Fun.js            # Default parameters in functions
+  │   ├── 112_IQ.js                           # Function return value interview questions
+  │   ├── 113_Rest_Param_Fn.js                # Rest parameters (...args)
+  │   ├── 114_IQ.js                           # Function returns and hoisting edge cases
+  │   ├── 115_Spread_IQ.js                    # Spread operator with functions
+  │   ├── 116_Scope_IQ.js                     # Function scope and global scope access
+  │   ├── 117_IQ.js                           # Nested scope and block scope concepts
+  │   ├── 118_Closure.js                      # Closures — basic closure example
+  │   ├── 119_Closure.js                      # Closure-based counter with increment/decrement/get
+  │   ├── 120_API_Real_Closure.js             # Real-world retry tracker using closures
+  │   ├── 121_Higher_Order_Fn.js              # Higher-order functions (functions as arguments)
+  │   └── 122_Pure_Function.js                # Pure vs impure functions
+  │
+  └── README.md                                 # This file
 ```
 
 ### Chapter 10 — Loops
@@ -231,6 +245,30 @@ Master JavaScript functions — the building blocks of reusable code. This chapt
 - Parameters are inputs; `return` is the output
 - Arrow functions provide a shorter, cleaner syntax for simple operations
 - Use function expressions when you need to pass functions as arguments or assign them to variables
+
+### Chapter 12 (Continued) — Advanced Function Concepts
+Dive deeper into modern and advanced function patterns that are essential for writing clean, maintainable automation code and handling real-world testing scenarios.
+
+- **Real-World Arrow Functions:** Converting normal functions and function expressions to arrow functions for cleaner API validation logic (e.g., `validateStatusCode` for HTTP status checks)
+- **IIFE (Immediately Invoked Function Expressions):** Self-executing functions that run immediately after definition — useful for setup scripts, test initialization, and avoiding global scope pollution (`(function(){ ... })()` and `(() => { ... })()`)
+- **Default Parameters:** Providing fallback values for function arguments so your code is robust when arguments are missing (`function retry(testName, maxRetries = 3, delay = 1000)`)
+- **Rest Parameters:** Accepting an indefinite number of arguments as an array using `...args` (`function logResult(suitName, ...Results)`)
+- **Spread Operator with Functions:** Passing array elements as individual arguments using `...` (`add(...numbers)`)
+- **Function Scope & Nested Scope:** Understanding global scope vs local scope, and how nested functions can access outer variables — but not vice versa
+- **Closures:** Functions that remember the scope in which they were created, even when executed elsewhere. Used for:
+  - Private state (counter with increment/decrement/get)
+  - Retry trackers that keep state across multiple calls
+  - Encapsulating configuration in test automation utilities
+- **Higher-Order Functions:** Functions that accept other functions as arguments or return functions — the foundation of functional programming and many array methods (`runWithLogin(testFn, testName)`)
+- **Pure vs Impure Functions:** Writing predictable functions that return the same output for the same input with no side effects (e.g., `calculatePassRate(total, passed)`), and recognizing impure functions that depend on external state
+
+**Key takeaways:**
+- IIFEs are great for isolated setup and teardown logic in test suites
+- Default parameters make functions more flexible and prevent `undefined` errors
+- Rest parameters and spread operator simplify working with variable-length data
+- Closures enable private state and are widely used in retry logic, caching, and module patterns
+- Higher-order functions are the backbone of functional programming and array iteration
+- Pure functions are easier to test, debug, and reason about — prefer them when possible
 
 ---
 
@@ -434,6 +472,14 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Function Types | No parameters, with parameters, with return, without return |
 | Function Expressions | Anonymous functions assigned to variables |
 | Arrow Functions | ES6 concise syntax (`=>`), implicit returns |
+| IIFE | Immediately Invoked Function Expressions for setup and scope isolation |
+| Default Parameters | Fallback values for function arguments |
+| Rest Parameters | `...args` for variable-length argument lists |
+| Spread Operator | Expanding arrays into individual function arguments |
+| Nested Scope | Block scope and nested function scope access |
+| Closures | Functions that retain access to their outer scope |
+| Higher-Order Functions | Functions that accept or return other functions |
+| Pure Functions | Predictable functions with no side effects |
 
 ---
 
@@ -453,7 +499,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
 10. **Chapter 09** → Learn to build interactive CLI programs with user input
 11. **Chapter 10** → Master loops — `for`, `while`, and `do...while` — for repetitive tasks
 12. **Chapter 11** → Master arrays — creating, searching, iterating, and transforming data collections
-13. **Chapter 12** → Master functions — parameters, return values, expressions, and arrow functions
+13. **Chapter 12** → Master functions — parameters, return values, expressions, arrow functions, IIFE, default parameters, rest/spread, closures, higher-order functions, and pure functions
 
 ---
 

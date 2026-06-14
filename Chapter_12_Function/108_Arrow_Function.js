@@ -1,17 +1,17 @@
 // Arrow unction (ES6)
 
-// const greet = function ( name1 ) {
-//     return "Hi" + name1;
-// }
+const greet = function ( name1 ) {
+    return "Hi" + name1;
+}
 
-// let r = greet( "Vikas" );
-// console.log( r );
+let r = greet( "Vikas" );
+console.log( r );
 
 /********************************************************** */
 
-// const greet2 = ( name1 ) => "Hi" + name1;
-// let r2 = greet2( "Vikas" );
-// console.log( r2 );
+const greet2 = ( name1 ) => "Hi" + name1;
+let r2 = greet2( "Vikas" );
+console.log( r2 );
 
 // If you want to make a normal function to arraow function.
 // Remove the keyword function, remove the keyword return, remove the curly braces and use the =>
@@ -21,3 +21,31 @@ console.log( doubleIt( 10 ) );
 
 const printIt = name => console.log( name );
 printIt( "Prajapati" );
+
+/********************************************************** */
+
+function add( a, b ) {
+    return ( a + b );
+}
+/******************************** */
+const add2 = ( a, b ) => a + b;
+/*********************************** */
+function say() {
+    console.log( "Hii" );
+}
+/****************************************** */
+const say1 = () => console.log( "Hii" );
+
+/*************************************** */
+
+const say1 = () => "Hii";
+
+/******************************************* */
+
+const greet = ( name ) => {
+    const message = "Hii" + name;
+    return ( message );
+}
+
+
+
