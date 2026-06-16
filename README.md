@@ -192,6 +192,23 @@ LearnPlaywright/
   │   ├── javascript_stringcheatsheet.md        # Markdown cheat sheet of all string methods
   │   └── javascript_stringcheatsheet.html      # Interactive HTML table cheat sheet with search
   │
+  ├── Chapter_14_Objects/
+  │   ├── 132_Objects.js                        # Objects introduction and basics
+  │   ├── 133_Objects2.js                       # Key-value pairs and object references
+  │   ├── 134_Objects_Creation.js             # Object creation and equality comparison
+  │   ├── 135_Real_Objects.js                 # Real-world object example (config management)
+  │   ├── 136_Primitive_Reference.js          # Primitive vs Reference types
+  │   ├── 137_Objects_Example.js              # JSON vs JS object notation
+  │   ├── 138_IQ.js                           # Object properties: access, modify, dynamic keys
+  │   ├── 139_Objects_Fn.js                   # Object methods and functions
+  │   ├── 140_Object_Deconstruction.js        # Object destructuring (basic, rename, default, nested)
+  │   ├── 141_Spread.js                       # Spread operator with objects
+  │   ├── 142_Object_Get_Set_Method.js        # Getter and setter methods
+  │   ├── 143_IQ.js                           # Object.keys, values, entries iteration
+  │   ├── 144_Objects.Real.js                 # Real-world config objects for automation
+  │   └── 145_Let_Const_Obje.js               # let vs const with objects
+  │
+  ├── interview.md                                # JavaScript interview questions and answers
   ├── index.html                                  # API Login endpoint reference page
   └── string-cheat-sheet.html                     # Standalone string methods cheat sheet
   ```
@@ -307,6 +324,28 @@ Master JavaScript strings — one of the most frequently used data types in test
 - `String.raw` is perfect for file paths: ``String.raw`C:\Users\name` ``
 - Always prefer `===` for string comparisons, and `localeCompare()` for sorting
 - Use `trim()` to clean user input, and `padStart()`/`padEnd()` for formatting numbers and codes
+
+### Chapter 14 — Objects
+Master JavaScript objects — the core data structure for organizing and managing data. This chapter covers everything from basic object creation to advanced patterns like destructuring, spread operators, getters/setters, and real-world automation configurations.
+
+- **Object Basics:** Creating objects with `{}`, key-value pairs, and nested objects
+- **Property Access:** Dot notation (`obj.key`) vs bracket notation (`obj["key"]`) vs dynamic keys
+- **Primitive vs Reference:** Understanding how objects are copied by reference, unlike primitive types
+- **Object Methods:** Defining and calling functions inside objects
+- **Destructuring:** Extracting properties with `{ name, age }`, renaming variables, setting defaults, and nested destructuring
+- **Spread Operator:** Copying and merging objects with `{ ...obj1, ...obj2 }`
+- **Getters & Setters:** Using `get` and `set` for computed properties
+- **Object Iteration:** `Object.keys()`, `Object.values()`, `Object.entries()`, and `for...in` loops
+- **Real-World Examples:** ENV configs, API expected responses, test configurations, and retry settings
+- **let vs const with Objects:** Why `const` is preferred for object references and how property mutation differs from reassignment
+
+**Key takeaways:**
+- Objects are copied by reference — modifying a copied object affects the original
+- Use `const` for object references to prevent accidental reassignment
+- Destructuring makes code cleaner when extracting multiple properties
+- Spread operator is the modern way to clone and merge objects
+- `Object.entries()` combined with `forEach` is powerful for iterating key-value pairs
+- Getters and setters provide a clean interface for computed object properties
 
 ---
 
@@ -527,6 +566,15 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | String Static Methods | `String.fromCharCode`, `String.fromCodePoint`, `String.raw` |
 | String Tasks | Reverse string, palindrome checker, anagram checker |
 | String Cheat Sheets | Markdown and HTML interactive reference tables |
+| Objects | Creation, property access, dot vs bracket notation, dynamic keys |
+| Object Methods | Functions inside objects, getters and setters |
+| Primitive vs Reference | How objects and arrays are copied by reference |
+| Object Destructuring | Basic, rename, default values, nested destructuring |
+| Object Spread | Cloning and merging objects with `...` |
+| Object Iteration | `Object.keys()`, `Object.values()`, `Object.entries()`, `for...in` |
+| Object Configurations | Real-world ENV, API response, and test config objects |
+| Interview Questions | `const` with objects, property mutation vs reassignment |
+| Interview File | Standalone interview questions and answers (`interview.md`) |
 
 ---
 
@@ -548,6 +596,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
 12. **Chapter 11** → Master arrays — creating, searching, iterating, and transforming data collections
 13. **Chapter 12** → Master functions — parameters, return values, expressions, arrow functions, IIFE, default parameters, rest/spread, closures, higher-order functions, and pure functions
 14. **Chapter 13** → Master strings — creation, search, extraction, transformation, and all 50+ built-in methods with practical tasks and cheat sheets
+15. **Chapter 14** → Master objects — creation, property access, reference vs primitive, destructuring, spread, getters/setters, and real-world configuration objects
 
 ---
 
