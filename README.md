@@ -208,6 +208,16 @@ LearnPlaywright/
   │   ├── 144_Objects.Real.js                 # Real-world config objects for automation
   │   └── 145_Let_Const_Obje.js               # let vs const with objects
   │
+  ├── Chapter_15_2D_Array/
+  │   ├── 146_2D_Array.js                     # 2D array basics and nested loops
+  │   ├── 147_IQ_2D.js                        # 2D array interview questions (grid, rows, columns)
+  │   ├── 148_Real.js                         # Real-world 2D array (test matrix)
+  │   ├── 149_2D_Array_Fn.js                  # 2D array with map, reduce, and filtering
+  │   ├── 150_IQ_Right_Pyramid_.js            # Right pyramid pattern with nested loops
+  │   ├── 151_Reverse_Pyramid.js              # Reverse pyramid pattern
+  │   ├── 152_Pyramid_Pattern.js              # Centered pyramid pattern
+  │   └── testdata.csv                        # Sample test data CSV file
+  │
   ├── interview.md                                # JavaScript interview questions and answers
   ├── index.html                                  # API Login endpoint reference page
   └── string-cheat-sheet.html                     # Standalone string methods cheat sheet
@@ -346,6 +356,29 @@ Master JavaScript objects — the core data structure for organizing and managin
 - Spread operator is the modern way to clone and merge objects
 - `Object.entries()` combined with `forEach` is powerful for iterating key-value pairs
 - Getters and setters provide a clean interface for computed object properties
+
+### Chapter 15 — 2D Arrays & Patterns
+Master two-dimensional arrays and nested loop patterns — essential for matrix operations, test result grids, and algorithmic problem solving in automation and QA.
+
+- **2D Array Basics:** Creating grids and matrices with nested arrays (`[[1,2,3], [4,5,6], [7,8,9]]`)
+- **Accessing Elements:** Using `grid[row][column]` notation and understanding zero-based indexing
+- **Nested Loops:** Traversing rows and columns with `for` loops (`for (let i = 0; i < rows; i++)` and `for (let j = 0; j < cols; j++)`)
+- **Row & Column Count:** Using `grid.length` for rows and `grid[0].length` for columns
+- **Real-World Test Matrix:** Representing test cases with name, status, and duration in a 2D array
+- **Modern Iteration:** Using `for...of` and `forEach` for cleaner nested iteration
+- **Functional Operations:** Using `map()` and `reduce()` to calculate row sums and aggregate 2D data
+- **Filtering in 2D:** Searching and filtering elements across nested arrays (e.g., finding all failed test cases)
+- **Pattern Programming:** Building star patterns to strengthen nested loop logic:
+  - Right pyramid (`*`, `**`, `***`)
+  - Reverse pyramid (`*****`, `****`, `***`)
+  - Centered pyramid with spaces
+
+**Key takeaways:**
+- 2D arrays are arrays of arrays — think rows and columns
+- Always use nested loops when you need to visit every element in a matrix
+- `for...of` and `forEach` make 2D iteration more readable
+- `map()` + `reduce()` can flatten or summarize 2D data efficiently
+- Pattern problems are excellent for building nested loop intuition
 
 ---
 
@@ -574,6 +607,11 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Object Iteration | `Object.keys()`, `Object.values()`, `Object.entries()`, `for...in` |
 | Object Configurations | Real-world ENV, API response, and test config objects |
 | Interview Questions | `const` with objects, property mutation vs reassignment |
+| 2D Arrays | Creating, accessing, and iterating nested arrays (matrices) |
+| Nested Loops | Row and column traversal with nested `for` loops |
+| 2D Array Methods | `map()`, `reduce()`, `forEach()`, `for...of` on 2D data |
+| Pattern Programming | Right pyramid, reverse pyramid, centered pyramid with stars |
+| Test Matrices | Representing test cases and results in 2D arrays |
 | Interview File | Standalone interview questions and answers (`interview.md`) |
 
 ---
@@ -595,8 +633,9 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
 11. **Chapter 10** → Master loops — `for`, `while`, and `do...while` — for repetitive tasks
 12. **Chapter 11** → Master arrays — creating, searching, iterating, and transforming data collections
 13. **Chapter 12** → Master functions — parameters, return values, expressions, arrow functions, IIFE, default parameters, rest/spread, closures, higher-order functions, and pure functions
-14. **Chapter 13** → Master strings — creation, search, extraction, transformation, and all 50+ built-in methods with practical tasks and cheat sheets
-15. **Chapter 14** → Master objects — creation, property access, reference vs primitive, destructuring, spread, getters/setters, and real-world configuration objects
+  14. **Chapter 13** → Master strings — creation, search, extraction, transformation, and all 50+ built-in methods with practical tasks and cheat sheets
+  15. **Chapter 14** → Master objects — creation, property access, reference vs primitive, destructuring, spread, getters/setters, and real-world configuration objects
+  16. **Chapter 15** → Master 2D arrays and nested loops — matrix traversal, test result grids, functional operations, and pattern programming
 
 ---
 
