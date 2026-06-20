@@ -218,6 +218,19 @@ LearnPlaywright/
   │   ├── 152_Pyramid_Pattern.js              # Centered pyramid pattern
   │   └── testdata.csv                        # Sample test data CSV file
   │
+  ├── Chapter_16_Callback/
+  │   ├── 153_Callback.js                     # Callback basics — named, anonymous, and arrow callbacks
+  │   ├── 154_Callback.js                     # Callback patterns and execution order
+  │   ├── 155_Callback_Fun.js                 # Callback functions fundamentals
+  │   ├── 156_Playwright_Callback_Fun.js      # Playwright-specific callback examples
+  │   ├── 157_JS_CB_Fun.js                    # JavaScript callback function patterns
+  │   ├── 158_Sync_CB_Fun.js                  # Synchronous callbacks
+  │   ├── 159_Async_CB.js                     # Asynchronous callbacks with setTimeout
+  │   ├── 160_CB_Hell.js                      # Callback Hell — 4-step E2E login flow
+  │   ├── 161_E2E_CB_Hell.js                  # Callback Hell — 22-step full E2E test flow
+  │   ├── 162_CB_Parameter.js                 # Callbacks with parameters
+  │   └── 163_CB_Return.js                    # Callbacks with return values and Pyramid of Doom
+  │
   ├── interview.md                                # JavaScript interview questions and answers
   ├── index.html                                  # API Login endpoint reference page
   └── string-cheat-sheet.html                     # Standalone string methods cheat sheet
@@ -379,6 +392,27 @@ Master two-dimensional arrays and nested loop patterns — essential for matrix 
 - `for...of` and `forEach` make 2D iteration more readable
 - `map()` + `reduce()` can flatten or summarize 2D data efficiently
 - Pattern problems are excellent for building nested loop intuition
+
+### Chapter 16 — Callbacks & Callback Hell
+Master JavaScript callbacks — one of the most important concepts for understanding asynchronous programming, event handling, and modern automation frameworks like Playwright.
+
+- **Callback Basics:** Understanding what callbacks are — functions passed as arguments to other functions and executed later
+- **Callback Types:** Named callbacks, anonymous callbacks, and arrow function callbacks
+- **Synchronous Callbacks:** Callbacks that execute immediately within the same call stack
+- **Asynchronous Callbacks:** Callbacks deferred with `setTimeout`, simulating real-world delays like API calls and page loads
+- **Callback Hell (Pyramid of Doom):** Deeply nested callbacks that make code hard to read and maintain
+  - `160_CB_Hell.js` — 4-step E2E login flow demonstrating callback nesting
+  - `161_E2E_CB_Hell.js` — 22-step full E2E test flow (open browser → navigate → login → dashboard → profile → settings → logout → close browser) showing how quickly callbacks become unmanageable
+- **Callbacks with Parameters:** Passing data between callback functions
+- **Callbacks with Return Values:** Using callbacks to compute and return results
+- **Real-World Context:** How callbacks appear in Playwright, API chaining, and event-driven architectures
+
+**Key takeaways:**
+- Callbacks are the foundation of asynchronous JavaScript
+- Named, anonymous, and arrow functions can all be used as callbacks
+- Synchronous callbacks run immediately; asynchronous callbacks are deferred
+- Callback Hell occurs when multiple asynchronous operations are nested deeply
+- This chapter sets the stage for understanding Promises and async/await (coming next!)
 
 ---
 
@@ -613,6 +647,15 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Pattern Programming | Right pyramid, reverse pyramid, centered pyramid with stars |
 | Test Matrices | Representing test cases and results in 2D arrays |
 | Interview File | Standalone interview questions and answers (`interview.md`) |
+| Callbacks | Functions passed as arguments to other functions |
+| Synchronous Callbacks | Callbacks executed immediately in the same call stack |
+| Asynchronous Callbacks | Callbacks deferred with `setTimeout`, simulating API delays |
+| Callback Hell | Deeply nested callbacks — the "Pyramid of Doom" |
+| Named Callbacks | Pre-defined functions passed as callback arguments |
+| Anonymous Callbacks | Inline functions passed directly as arguments |
+| Arrow Callbacks | Concise arrow functions used as callbacks |
+| Callback Parameters | Passing data between nested callback functions |
+| Callback Return Values | Using callbacks to compute and return results |
 
 ---
 
@@ -636,6 +679,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
   14. **Chapter 13** → Master strings — creation, search, extraction, transformation, and all 50+ built-in methods with practical tasks and cheat sheets
   15. **Chapter 14** → Master objects — creation, property access, reference vs primitive, destructuring, spread, getters/setters, and real-world configuration objects
   16. **Chapter 15** → Master 2D arrays and nested loops — matrix traversal, test result grids, functional operations, and pattern programming
+  17. **Chapter 16** → Understand callbacks — synchronous, asynchronous, and the infamous Callback Hell (Pyramid of Doom) that makes the case for Promises and async/await
 
 ---
 
