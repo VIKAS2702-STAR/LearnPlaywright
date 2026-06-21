@@ -231,6 +231,15 @@ LearnPlaywright/
   │   ├── 162_CB_Parameter.js                 # Callbacks with parameters
   │   └── 163_CB_Return.js                    # Callbacks with return values and Pyramid of Doom
   │
+  ├── Chapter_17_Promises/
+  │   ├── 164_Promise.js                      # Promise basics — resolve and reject
+  │   ├── 165_Promise_Real_API.js             # Real-world API promise with .then()
+  │   ├── 166_Promise_Real_API_Part2.js       # Promise chaining and API response handling
+  │   ├── 167_Finally.js                      # .finally() for cleanup logic
+  │   ├── 168_CB_Pyramid.js                   # Callback pyramid vs Promise flattening
+  │   ├── 169_Promise_All.js                  # Promise.all and Promise.allSettled
+  │   └── 170_Promise_IQ.js                   # Promise interview questions and patterns
+  │
   ├── interview.md                                # JavaScript interview questions and answers
   ├── index.html                                  # API Login endpoint reference page
   └── string-cheat-sheet.html                     # Standalone string methods cheat sheet
@@ -413,6 +422,27 @@ Master JavaScript callbacks — one of the most important concepts for understan
 - Synchronous callbacks run immediately; asynchronous callbacks are deferred
 - Callback Hell occurs when multiple asynchronous operations are nested deeply
 - This chapter sets the stage for understanding Promises and async/await (coming next!)
+
+### Chapter 17 — Promises
+Master JavaScript Promises — the modern way to handle asynchronous operations. This chapter builds directly on callbacks and shows how Promises flatten nested code, improve readability, and make error handling predictable.
+
+- **Promise Basics:** Creating promises with `new Promise((resolve, reject) => { ... })`
+- **Resolve & Reject:** Handling success and failure states in asynchronous logic
+- **Real-World API Calls:** Using `.then()` to process resolved values (e.g., HTTP status and response body)
+- **Promise Chaining:** Linking multiple `.then()` calls to transform data step by step
+- **Error Handling:** Using `.catch()` to handle rejected promises and thrown errors in chains
+- **.finally():** Running cleanup code regardless of whether the promise resolved or rejected
+- **Callback Pyramid vs Promises:** Visual comparison of nested callback hell vs flat promise chains
+- **Promise.all:** Running multiple promises in parallel and waiting for all to succeed
+- **Promise.allSettled:** Getting results for every promise even when some fail — perfect for test reporting
+- **Interview Questions:** Common promise patterns, chaining behavior, and error flow questions
+
+**Key takeaways:**
+- Promises represent a value that may not exist yet but will be resolved at some point in the future
+- `.then()` handles success, `.catch()` handles errors, and `.finally()` runs always
+- Promise chaining keeps asynchronous code flat and readable compared to nested callbacks
+- `Promise.all` is great for parallel independent operations; `Promise.allSettled` is ideal when you need every result
+- Understanding promise execution order is a common interview topic
 
 ---
 
@@ -656,6 +686,13 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Arrow Callbacks | Concise arrow functions used as callbacks |
 | Callback Parameters | Passing data between nested callback functions |
 | Callback Return Values | Using callbacks to compute and return results |
+| Promises | Creating, resolving, and rejecting promises |
+| Promise .then() | Handling resolved values and chaining promises |
+| Promise .catch() | Error handling in promise chains |
+| Promise .finally() | Cleanup logic regardless of outcome |
+| Promise.all | Parallel execution of multiple promises |
+| Promise.allSettled | Getting all results including failures |
+| Promise Interview Questions | Common patterns and execution order |
 
 ---
 
@@ -680,6 +717,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
   15. **Chapter 14** → Master objects — creation, property access, reference vs primitive, destructuring, spread, getters/setters, and real-world configuration objects
   16. **Chapter 15** → Master 2D arrays and nested loops — matrix traversal, test result grids, functional operations, and pattern programming
   17. **Chapter 16** → Understand callbacks — synchronous, asynchronous, and the infamous Callback Hell (Pyramid of Doom) that makes the case for Promises and async/await
+  18. **Chapter 17** → Master Promises — resolve/reject, `.then()` chaining, `.catch()` error handling, `.finally()` cleanup, `Promise.all`, `Promise.allSettled`, and interview patterns
 
 ---
 
