@@ -240,6 +240,19 @@ LearnPlaywright/
   │   ├── 169_Promise_All.js                  # Promise.all and Promise.allSettled
   │   └── 170_Promise_IQ.js                   # Promise interview questions and patterns
   │
+  ├── Chapter_18_Asynch_Await/
+  │   ├── 171_Async.js                        # async/await with try/catch/finally
+  │   ├── 172_Async_P2.js                     # Awaiting resolved promises (token example)
+  │   ├── 173_Pyramid_Dom.js                  # Flattening callback pyramid with async/await E2E flow
+  │   ├── 174_Async_Ex.js                     # Basic async/await and Playwright test example
+  │   ├── 175_Async_Seq.js                    # Sequential API calls with async/await
+  │   ├── 176_Async_Parallel.js               # Parallel API calls with Promise.all and async/await
+  │   ├── 177_Async_Await_IQ.js               # Async/await interview questions and patterns
+  │   └── 178_Advance_Concept_Login.js        # Advanced Playwright login test with async/await and test.steps
+  │
+  ├── Chapter_19_Playwright_Basics/
+  │   └── package.json                        # Playwright setup and dependencies
+  │
   ├── interview.md                                # JavaScript interview questions and answers
   ├── index.html                                  # API Login endpoint reference page
   └── string-cheat-sheet.html                     # Standalone string methods cheat sheet
@@ -443,6 +456,26 @@ Master JavaScript Promises — the modern way to handle asynchronous operations.
 - Promise chaining keeps asynchronous code flat and readable compared to nested callbacks
 - `Promise.all` is great for parallel independent operations; `Promise.allSettled` is ideal when you need every result
 - Understanding promise execution order is a common interview topic
+
+### Chapter 18 — Async/Await
+Master JavaScript `async/await` — the modern, readable syntax for writing asynchronous code that looks and behaves like synchronous code. This chapter builds directly on Promises and shows how `async` functions and `await` expressions eliminate callback pyramid complexity and make automation code cleaner.
+
+- **async/await Basics:** Declaring async functions with `async` and pausing execution with `await`
+- **try/catch/finally:** Handling errors and cleanup in async functions using familiar synchronous patterns
+- **Awaiting Promises:** Waiting for resolved values from promise-returning functions (e.g., `getToken()`)
+- **Flattening Callback Pyramid:** Converting deeply nested callback hell into clean, linear async/await code
+  - `173_Pyramid_Dom.js` — 4-step E2E login flow rewritten with async/await for maximum readability
+- **Playwright Test Example:** Using async/await in real Playwright tests (`page.goto()`, `expect()`)
+- **Sequential Execution:** Running dependent async operations one after another (e.g., Login → Dashboard → Report)
+- **Parallel Execution:** Using `Promise.all` inside async functions to run independent calls concurrently
+- **Interview Questions:** Common async/await patterns, execution order, and behavior questions
+
+**Key takeaways:**
+- `async` functions always return a Promise implicitly
+- `await` pauses execution until the promise resolves, making code read top-to-bottom
+- Use `try/catch/finally` for error handling in async functions — just like synchronous code
+- `await` sequential calls when operations depend on each other; use `Promise.all` for independent parallel calls
+- `async/await` is the modern standard for Playwright and most JavaScript automation frameworks
 
 ---
 
@@ -693,6 +726,12 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Promise.all | Parallel execution of multiple promises |
 | Promise.allSettled | Getting all results including failures |
 | Promise Interview Questions | Common patterns and execution order |
+| async/await Basics | Declaring async functions and awaiting promises |
+| try/catch with async/await | Error handling in async functions |
+| Sequential Async Execution | Awaiting dependent operations one after another |
+| Parallel Async Execution | Promise.all inside async functions for concurrent calls |
+| Async/Await Interview Questions | Common patterns and execution order |
+| Playwright Basics Setup | Installing Playwright and dependencies |
 
 ---
 
@@ -718,6 +757,8 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
   16. **Chapter 15** → Master 2D arrays and nested loops — matrix traversal, test result grids, functional operations, and pattern programming
   17. **Chapter 16** → Understand callbacks — synchronous, asynchronous, and the infamous Callback Hell (Pyramid of Doom) that makes the case for Promises and async/await
   18. **Chapter 17** → Master Promises — resolve/reject, `.then()` chaining, `.catch()` error handling, `.finally()` cleanup, `Promise.all`, `Promise.allSettled`, and interview patterns
+  19. **Chapter 18** → Master async/await — the modern syntax for clean asynchronous code, sequential and parallel execution, and Playwright test integration
+  20. **Chapter 19** → Playwright basics setup — installing Playwright and preparing for browser automation
 
 ---
 
