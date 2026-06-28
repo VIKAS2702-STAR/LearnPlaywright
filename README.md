@@ -251,11 +251,23 @@ LearnPlaywright/
   │   └── 178_Advance_Concept_Login.js        # Advanced Playwright login test with async/await and test.steps
   │
   ├── Chapter_19_Playwright_Basics/
-  │   └── package.json                        # Playwright setup and dependencies
+  │   ├── .gitignore                            # Playwright ignore rules
+  │   ├── package.json                          # Playwright setup and dependencies
+  │   ├── package-lock.json                     # Lockfile for reproducible installs
+  │   ├── playwright.config.ts                  # Playwright test configuration
+  │   └── tests/                                # Playwright test specs
+  │       ├── example.spec.ts
+  │       ├── codegen-tta-cart.spec.ts
+  │       └── codegen-tta-cart.spec2.ts
   │
-  ├── interview.md                                # JavaScript interview questions and answers
-  ├── index.html                                  # API Login endpoint reference page
-  └── string-cheat-sheet.html                     # Standalone string methods cheat sheet
+  ├── .github/
+  │   └── workflows/
+  │       └── playwright.yml                    # GitHub Actions CI for Playwright
+  │
+  ├── interview.md                              # JavaScript interview questions and answers
+  ├── index.html                                # API Login endpoint reference page
+  ├── sdetlive.pdf                              # SDET learning reference PDF
+  └── string-cheat-sheet.html                   # Standalone string methods cheat sheet
   ```
 
 ### Chapter 10 — Loops
@@ -479,6 +491,25 @@ Master JavaScript `async/await` — the modern, readable syntax for writing asyn
 
 ---
 
+### Chapter 19 — Playwright Basics
+Get hands-on with browser automation using Playwright. This chapter sets up the Playwright testing environment, writes real test specs in TypeScript, and runs them locally and via GitHub Actions CI.
+
+- **Project Setup:** Playwright installation with `npm`, TypeScript configuration, and `playwright.config.ts`
+- **Test Specs:** Real-world example tests including generated cart flows (`codegen-tta-cart.spec.ts`)
+- **Configuration:** Browser projects (Chromium), HTML reporting, retries on CI, and trace collection
+- **CI/CD:** GitHub Actions workflow (`.github/workflows/playwright.yml`) that installs dependencies, browsers, and runs tests on every push/PR
+- **Key Commands:**
+  - `npx playwright test` — run all tests
+  - `npx playwright test --ui` — run tests in UI mode
+  - `npx playwright show-report` — view HTML test report
+
+**Key takeaways:**
+- Playwright tests are async by nature — use `async/await` with page actions
+- `playwright.config.ts` controls browsers, parallelism, retries, and reporters
+- GitHub Actions automates test execution and artifact collection for every code change
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -507,6 +538,33 @@ Master JavaScript `async/await` — the modern, readable syntax for writing asyn
 4. Run any JavaScript file with Node.js:
    ```bash
    node Chapter_01_BasicsJS/01_Basics.js
+   ```
+
+### Running Playwright Tests
+
+1. Navigate to the Playwright directory:
+   ```bash
+   cd Chapter_19_Playwright_Basics
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm ci
+   ```
+
+3. Install Playwright browsers:
+   ```bash
+   npx playwright install
+   ```
+
+4. Run the tests:
+   ```bash
+   npx playwright test
+   ```
+
+5. View the HTML report:
+   ```bash
+   npx playwright show-report
    ```
 
 ---
@@ -732,6 +790,9 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Parallel Async Execution | Promise.all inside async functions for concurrent calls |
 | Async/Await Interview Questions | Common patterns and execution order |
 | Playwright Basics Setup | Installing Playwright and dependencies |
+| Playwright Config | `playwright.config.ts`, browsers, reporters, retries, and tracing |
+| Playwright Test Specs | TypeScript test files with `page`, `expect`, and async/await |
+| GitHub Actions CI | Automated test execution on push and pull requests |
 
 ---
 
@@ -758,7 +819,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
   17. **Chapter 16** → Understand callbacks — synchronous, asynchronous, and the infamous Callback Hell (Pyramid of Doom) that makes the case for Promises and async/await
   18. **Chapter 17** → Master Promises — resolve/reject, `.then()` chaining, `.catch()` error handling, `.finally()` cleanup, `Promise.all`, `Promise.allSettled`, and interview patterns
   19. **Chapter 18** → Master async/await — the modern syntax for clean asynchronous code, sequential and parallel execution, and Playwright test integration
-  20. **Chapter 19** → Playwright basics setup — installing Playwright and preparing for browser automation
+  20. **Chapter 19** → Playwright basics — set up Playwright, write TypeScript test specs, configure browsers/reporters, and run tests locally and via GitHub Actions CI
 
 ---
 
