@@ -260,6 +260,16 @@ LearnPlaywright/
   │       ├── codegen-tta-cart.spec.ts
   │       └── codegen-tta-cart.spec2.ts
   │
+  ├── Chapter_20_TypeScript_Basics/
+  │   ├── utils.js                              # Named exports (BASE_URL, formatTestName)
+  │   ├── testutils.js                          # Named exports (BASE_URL, formatUpperCaseString)
+  │   ├── logger.js                             # Default export (log) + named export (log2)
+  │   └── EXPORT_IMPORT/
+  │       ├── 179_Export_Import.js              # Basic named import example
+  │       ├── 180_Utils.js                      # Named imports with aliases (as)
+  │       ├── 181_Logger.js                     # Default import example
+  │       └── ExplainDefault.md                 # Guide: default vs non-default exports
+  │
   ├── .github/
   │   └── workflows/
   │       └── playwright.yml                    # GitHub Actions CI for Playwright
@@ -507,6 +517,32 @@ Get hands-on with browser automation using Playwright. This chapter sets up the 
 - Playwright tests are async by nature — use `async/await` with page actions
 - `playwright.config.ts` controls browsers, parallelism, retries, and reporters
 - GitHub Actions automates test execution and artifact collection for every code change
+
+---
+
+### Chapter 20 — TypeScript Basics: Export & Import
+Learn how to structure and share code across files using JavaScript/TypeScript modules. This chapter introduces the two fundamental export patterns — named exports and default exports — with hands-on examples and a detailed comparison guide.
+
+- **Named Exports:** Exporting multiple items from a module using `export`
+  - `utils.js` — exports `BASE_URL` and `formatTestName`
+  - `testutils.js` — exports `BASE_URL` and `formatUpperCaseString`
+  - Import syntax: `import { name } from "./module.js"`
+  - Aliasing imports: `import { BASE_URL as bul } from "./module.js"` to avoid naming conflicts
+- **Default Exports:** Exporting a single primary item from a module using `export default`
+  - `logger.js` — default exports a `log()` function, plus a named export `log2()`
+  - Import syntax: `import anyName from "./module.js"` (no curly braces, free naming)
+- **Practical Examples:**
+  - `179_Export_Import.js` — basic named imports
+  - `180_Utils.js` — importing from multiple modules with aliases
+  - `181_Logger.js` — importing a default export
+- **Reference Guide:** [`ExplainDefault.md`](./Chapter_20_TypeScript_Basics/EXPORT_IMPORT/ExplainDefault.md) — complete explanation of default vs non-default exports with syntax, key points, and comparison table
+
+**Key takeaways:**
+- Use named exports when a module provides multiple related utilities
+- Use default exports when a module has a single primary responsibility
+- A module can mix both default and named exports
+- Aliases (`as`) resolve name collisions when importing from multiple modules
+- Always match your import syntax to the export type: `{}` for named, no braces for default
 
 ---
 
@@ -793,6 +829,10 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Playwright Config | `playwright.config.ts`, browsers, reporters, retries, and tracing |
 | Playwright Test Specs | TypeScript test files with `page`, `expect`, and async/await |
 | GitHub Actions CI | Automated test execution on push and pull requests |
+| Named Exports | Exporting multiple items with `export` and importing with `{ }` |
+| Default Exports | Exporting a single primary item with `export default` |
+| Import Aliases | Renaming imports with `as` to avoid naming conflicts |
+| Module Organization | Structuring code across multiple files using exports and imports |
 
 ---
 
@@ -820,6 +860,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
   18. **Chapter 17** → Master Promises — resolve/reject, `.then()` chaining, `.catch()` error handling, `.finally()` cleanup, `Promise.all`, `Promise.allSettled`, and interview patterns
   19. **Chapter 18** → Master async/await — the modern syntax for clean asynchronous code, sequential and parallel execution, and Playwright test integration
   20. **Chapter 19** → Playwright basics — set up Playwright, write TypeScript test specs, configure browsers/reporters, and run tests locally and via GitHub Actions CI
+  21. **Chapter 20** → TypeScript basics — learn module exports and imports, understand named vs default exports, and master code organization across files
 
 ---
 
