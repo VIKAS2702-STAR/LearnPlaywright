@@ -264,11 +264,20 @@ LearnPlaywright/
   │   ├── utils.js                              # Named exports (BASE_URL, formatTestName)
   │   ├── testutils.js                          # Named exports (BASE_URL, formatUpperCaseString)
   │   ├── logger.js                             # Default export (log) + named export (log2)
-  │   └── EXPORT_IMPORT/
-  │       ├── 179_Export_Import.js              # Basic named import example
-  │       ├── 180_Utils.js                      # Named imports with aliases (as)
-  │       ├── 181_Logger.js                     # Default import example
-  │       └── ExplainDefault.md                 # Guide: default vs non-default exports
+  │   ├── 01_EXPORT_IMPORT/
+  │   │   ├── 179_Export_Import.js              # Basic named import example
+  │   │   ├── 180_Utils.js                      # Named imports with aliases (as)
+  │   │   ├── 181_Logger.js                     # Default import example
+  │   │   └── ExplainDefault.md                 # Guide: default vs non-default exports
+  │   └── 02_CLASS_OBJECT/
+  │       ├── 182_CLass_Object.js               # Class basics: attributes and behaviors
+  │       ├── 183_Class_Object2.js              # Constructor and object creation
+  │       ├── 184_Car.js                        # Parameterized constructor with this keyword
+  │       ├── 185_Real_Browser.js               # Real-world TestCase class example
+  │       ├── 186_IQ.js                         # Browser class interview questions
+  │       ├── 187_Public_Private.js             # Public vs private fields (#)
+  │       ├── 188_Static.js                     # Static fields and methods
+  │       └── 189_Static2.js                    # Static property with constructor
   │
   ├── .github/
   │   └── workflows/
@@ -520,8 +529,11 @@ Get hands-on with browser automation using Playwright. This chapter sets up the 
 
 ---
 
-### Chapter 20 — TypeScript Basics: Export & Import
-Learn how to structure and share code across files using JavaScript/TypeScript modules. This chapter introduces the two fundamental export patterns — named exports and default exports — with hands-on examples and a detailed comparison guide.
+### Chapter 20 — TypeScript Basics: Export, Import, Classes & Objects
+Learn how to structure and share code across files using JavaScript/TypeScript modules, and master Object-Oriented Programming (OOP) fundamentals with classes and objects.
+
+#### Section 01 — Export & Import
+This section introduces the two fundamental export patterns — named exports and default exports — with hands-on examples and a detailed comparison guide.
 
 - **Named Exports:** Exporting multiple items from a module using `export`
   - `utils.js` — exports `BASE_URL` and `formatTestName`
@@ -535,7 +547,7 @@ Learn how to structure and share code across files using JavaScript/TypeScript m
   - `179_Export_Import.js` — basic named imports
   - `180_Utils.js` — importing from multiple modules with aliases
   - `181_Logger.js` — importing a default export
-- **Reference Guide:** [`ExplainDefault.md`](./Chapter_20_TypeScript_Basics/EXPORT_IMPORT/ExplainDefault.md) — complete explanation of default vs non-default exports with syntax, key points, and comparison table
+- **Reference Guide:** [`ExplainDefault.md`](./Chapter_20_TypeScript_Basics/01_EXPORT_IMPORT/ExplainDefault.md) — complete explanation of default vs non-default exports with syntax, key points, and comparison table
 
 **Key takeaways:**
 - Use named exports when a module provides multiple related utilities
@@ -543,6 +555,31 @@ Learn how to structure and share code across files using JavaScript/TypeScript m
 - A module can mix both default and named exports
 - Aliases (`as`) resolve name collisions when importing from multiple modules
 - Always match your import syntax to the export type: `{}` for named, no braces for default
+
+#### Section 02 — Classes & Objects
+Master Object-Oriented Programming in JavaScript with classes, constructors, fields, methods, and access modifiers. This section builds on objects knowledge and introduces reusable class-based patterns essential for automation frameworks.
+
+- **Class Basics:** Defining classes with attributes (fields) and behaviors (methods)
+  - `182_CLass_Object.js` — basic class structure with empty methods
+- **Constructors:** Special methods that run automatically when an object is created
+  - `183_Class_Object2.js` — default constructor and object reference variables
+  - `184_Car.js` — parameterized constructor using `this` to assign instance properties
+- **Real-World Example:**
+  - `185_Real_Browser.js` — `TestCase` class with name, status, priority, and a `display()` method for QA automation
+- **Interview Questions:**
+  - `186_IQ.js` — `Browser` class with constructor parameters, methods, and instance properties
+- **Access Modifiers:**
+  - `187_Public_Private.js` — public fields vs private fields (`#apikey`), encapsulation, and custom getter methods for secure data access
+- **Static Members:**
+  - `188_Static.js` — static fields and methods shared across all instances (`Student.name`, `Student.display()`)
+  - `189_Static2.js` — static properties combined with instance properties (`Person.Nationality`)
+
+**Key takeaways:**
+- Classes are blueprints; objects are instances created with `new ClassName()`
+- Constructors initialize object state — use `this` to access instance properties
+- Private fields (`#field`) hide implementation details and enforce encapsulation
+- Static members belong to the class itself, not to individual instances
+- Classes are the foundation of OOP and are heavily used in Playwright Page Object Model patterns
 
 ---
 
@@ -833,6 +870,12 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Default Exports | Exporting a single primary item with `export default` |
 | Import Aliases | Renaming imports with `as` to avoid naming conflicts |
 | Module Organization | Structuring code across multiple files using exports and imports |
+| Classes | Defining classes with attributes and behaviors |
+| Constructors | Default and parameterized constructors with `this` keyword |
+| Objects from Classes | Creating instances with `new ClassName()` |
+| Public vs Private Fields | Encapsulation with `#privateField` syntax |
+| Static Members | Static fields and methods shared across all class instances |
+| OOP for Automation | Real-world class patterns for test cases and browser objects |
 
 ---
 
@@ -860,7 +903,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
   18. **Chapter 17** → Master Promises — resolve/reject, `.then()` chaining, `.catch()` error handling, `.finally()` cleanup, `Promise.all`, `Promise.allSettled`, and interview patterns
   19. **Chapter 18** → Master async/await — the modern syntax for clean asynchronous code, sequential and parallel execution, and Playwright test integration
   20. **Chapter 19** → Playwright basics — set up Playwright, write TypeScript test specs, configure browsers/reporters, and run tests locally and via GitHub Actions CI
-  21. **Chapter 20** → TypeScript basics — learn module exports and imports, understand named vs default exports, and master code organization across files
+  21. **Chapter 20** → TypeScript basics — learn module exports and imports (named vs default), then master classes and objects with constructors, access modifiers, and static members
 
 ---
 
