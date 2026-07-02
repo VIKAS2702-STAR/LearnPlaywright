@@ -277,7 +277,35 @@ LearnPlaywright/
   │       ├── 186_IQ.js                         # Browser class interview questions
   │       ├── 187_Public_Private.js             # Public vs private fields (#)
   │       ├── 188_Static.js                     # Static fields and methods
-  │       └── 189_Static2.js                    # Static property with constructor
+  │       ├── 189_Static2.js                    # Static property with constructor
+  │       ├── 190_Task1.js                      # Calculator class task with arithmetic operations
+  │       └── 191_Task2.js                      # Student class with static batch and 10 instances
+  │
+  │   ├── 03_ENCAPSULATION/
+  │       ├── 192_Encapsulation.js              # Private fields (#balance) with getters
+  │       ├── 193_Real_Encaps.js                # Private child fields with getter/setter
+  │       ├── 194_Car_Encaps.js                 # Car class with private engine and getter/setter
+  │       └── 195_Bank_Encaps.js               # ICICI bank with authorized balance setter
+  │
+  │   ├── 04_INHERITANCE/
+  │       ├── 196_Single_Inheritance.js         # BasePage → LoginPage single inheritance
+  │       ├── 197_Single_Inheritance2.js        # Animal → Dog with super() constructor
+  │       ├── 198_Single_Inheritance_Con.js     # Method overriding in BaseTest → APITest
+  │       ├── 199_IQ.js                         # super.setUp() and super.teardown() usage
+  │       ├── 200_IQ.js                         # Runtime polymorphism with TestCase subclasses
+  │       ├── 201_Real_Page_Object_Model.js     # POM pattern with BasePage and page classes
+  │       ├── 202_Multiple_Inheritance.js       # Why JS doesn't support multiple inheritance
+  │       ├── 203_Multilevel_Inheritance.js     # BasePage → AuthPage → AdminPage chain
+  │       └── 204_Heirarichal_Inheritance.js   # Hierarchical inheritance structure
+  │
+  │   ├── 05_POLYMORPHISM/
+  │       └── 205_Method_Overriding.js          # Method overriding in APITest extending BaseTest
+  │
+  │   └── INTERVIEW_QUESTION/
+  │       ├── EX1.js                            # Bug class with severity display
+  │       ├── EX2.js                            # Environment class with default parameters
+  │       ├── EX3.js                            # User class with greet method
+  │       └── EX4.js                            # Counter class with method chaining
   │
   ├── .github/
   │   └── workflows/
@@ -581,6 +609,75 @@ Master Object-Oriented Programming in JavaScript with classes, constructors, fie
 - Static members belong to the class itself, not to individual instances
 - Classes are the foundation of OOP and are heavily used in Playwright Page Object Model patterns
 
+#### Section 03 — Encapsulation
+Master encapsulation — bundling data and methods together while restricting direct access to internal state. This section covers private fields, getters, setters, and real-world patterns for secure data handling.
+
+- **Private Fields:** Using `#balance` syntax to hide internal state from direct external access
+  - `192_Encapsulation.js` — basic private `#balance` with `deposit()` and `getBalance()`
+- **Getters & Setters:** Controlled read/write access to private properties
+  - `193_Real_Encaps.js` — private child fields with getter and setter methods
+  - `194_Car_Encaps.js` — `Car` class with private `#engine` and `getEngine()` / `setEngine()`
+- **Authorized Access Patterns:** Conditional modification of private data
+  - `195_Bank_Encaps.js` — `ICICI` bank class where `setBalance()` requires `isCashier` authorization
+
+**Key takeaways:**
+- Private fields (`#field`) prevent accidental external mutation
+- Getters provide read access without exposing the field directly
+- Setters can enforce business rules (e.g., authorization checks) before allowing changes
+- Encapsulation is essential for building robust, maintainable automation frameworks
+
+#### Section 04 — Inheritance
+Master inheritance — creating new classes from existing ones to reuse code and build hierarchical relationships. This section covers all inheritance types with practical examples and real-world Playwright Page Object Model patterns.
+
+- **Single Inheritance:** A child class extending one parent class
+  - `196_Single_Inheritance.js` — `BasePage` → `LoginPage` inheriting `open()` and `close()`
+  - `197_Single_Inheritance2.js` — `Animal` → `Dog` with `super(name)` constructor call and additional `breed` property
+- **Method Overriding:** Replacing parent methods in child classes
+  - `198_Single_Inheritance_Con.js` — `BaseTest.setup()` overridden by `APITest.setup()`
+  - `199_IQ.js` — using `super.setUp()` and `super.teardown()` to call parent methods before/after child logic
+- **Runtime Polymorphism:** Same method call behaving differently based on the actual object type
+  - `200_IQ.js` — `TestCase.execute()` overridden by `UniTest`, `APITest`, and `E2ETest`
+- **Real-World POM Pattern:** Page Object Model using inheritance
+  - `201_Real_Page_Object_Model.js` — `BasePage.verify()` overridden by `LoginPage`, `DashboardPage`, and `cartPage`
+- **Multiple Inheritance:** Why JavaScript doesn't support extending multiple classes
+  - `202_Multiple_Inheritance.js` — demonstrates that `class Son extends F1, F2` is invalid
+- **Multilevel Inheritance:** Chains of inheritance across three or more levels
+  - `203_Multilevel_Inheritance.js` — `BasePage` → `AuthPage` → `AdminPage` with `super("Admin Page")`
+- **Hierarchical Inheritance:** One parent with multiple independent children
+  - `204_Heirarichal_Inheritance.js` — `Father` with `son1` and `son2` as separate subclasses
+
+**Key takeaways:**
+- Use `extends` to create a subclass and `super()` to call the parent constructor
+- Method overriding lets child classes customize parent behavior
+- `super.methodName()` calls the parent version of an overridden method
+- Runtime polymorphism enables arrays of different subclasses to be treated uniformly
+- Inheritance is the backbone of Page Object Model (POM) in Playwright automation
+- JavaScript supports single inheritance only — use composition for multiple parent behaviors
+
+#### Section 05 — Polymorphism
+Master polymorphism — the ability for different classes to respond to the same method call in different ways. This section focuses on method overriding as the primary polymorphism mechanism in JavaScript.
+
+- **Method Overriding:** Child class provides a specific implementation of a parent method
+  - `205_Method_Overriding.js` — `APITest` overrides `BaseTest.setup()` with its own browser-opening logic
+
+**Key takeaways:**
+- Polymorphism enables writing generic code that works with any subclass
+- Method overriding is the most common form of polymorphism in JavaScript
+- Combined with inheritance, polymorphism powers extensible test frameworks and POM designs
+
+#### Interview Questions
+Practice common OOP and class-based interview questions that test understanding of constructors, default parameters, method chaining, and encapsulation.
+
+- `EX1.js` — `Bug` class with `title` and `severity` properties and `display()` method
+- `EX2.js` — `Environment` class with default parameters (`name = "staging"`, `port = 3000`) and `getURL()`
+- `EX3.js` — `User` class with `greet()` method demonstrating constructor initialization
+- `EX4.js` — `Counter` class with method chaining (`increment().display()` returns `this`)
+
+**Key takeaways:**
+- Default parameters make classes flexible and reusable across environments
+- Method chaining (`return this`) enables fluent, readable APIs
+- Interview questions often test combined knowledge of constructors, methods, and OOP principles
+
 ---
 
 ## 🚀 Getting Started
@@ -876,6 +973,14 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Public vs Private Fields | Encapsulation with `#privateField` syntax |
 | Static Members | Static fields and methods shared across all class instances |
 | OOP for Automation | Real-world class patterns for test cases and browser objects |
+| Encapsulation | Private fields (`#field`), getters, setters, and authorized access patterns |
+| Inheritance | Single, multilevel, and hierarchical inheritance with `extends` and `super()` |
+| Method Overriding | Replacing parent methods in child classes for customized behavior |
+| Runtime Polymorphism | Same method call behaving differently across subclasses |
+| Multiple Inheritance | Why JavaScript does not support extending multiple classes |
+| Page Object Model (POM) | Real-world POM pattern using inheritance for Playwright automation |
+| Method Chaining | Fluent APIs by returning `this` from methods |
+| OOP Interview Questions | Constructors, defaults, encapsulation, and chaining practice |
 
 ---
 
@@ -904,6 +1009,12 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
   19. **Chapter 18** → Master async/await — the modern syntax for clean asynchronous code, sequential and parallel execution, and Playwright test integration
   20. **Chapter 19** → Playwright basics — set up Playwright, write TypeScript test specs, configure browsers/reporters, and run tests locally and via GitHub Actions CI
   21. **Chapter 20** → TypeScript basics — learn module exports and imports (named vs default), then master classes and objects with constructors, access modifiers, and static members
+      - **Section 01** → Named vs default exports and import aliases
+      - **Section 02** → Classes, constructors, access modifiers, and static members
+      - **Section 03** → Encapsulation with private fields, getters, and setters
+      - **Section 04** → Inheritance — single, multilevel, hierarchical, and method overriding with `super()`
+      - **Section 05** → Polymorphism and method overriding for extensible code
+      - **Interview Questions** → Practice constructors, defaults, method chaining, and OOP scenarios
 
 ---
 
