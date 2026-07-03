@@ -43,6 +43,7 @@ LearnPlaywright/
 │   │                                         #   - dromedaryCase, UpperCamelCase
 │   │                                         #   - Hungarian notation, dollarCase
 │   ├── 08_Comments.js                        # Comments in JavaScript
+│   ├── 09_Literals_Identifiers_Keywords.md   # Reference: literals, identifiers & keywords
 │   ├── js_identifier_rules.js                # Identifier rules reference
 │   ├── VS_Code_Keyboard_Shortcut_windows.md  # VS Code shortcuts for Windows
 │   └── VS_Code_Keyboard_Shortcut_mac.md      # VS Code shortcuts for macOS
@@ -129,7 +130,7 @@ LearnPlaywright/
 │   ├── 75_For_Loops.js                     # For loop examples
 │   ├── 76_For_Loop2.js                     # For loop with different variables
 │   ├── 77_IQ.js                            # For loop interview questions
-│   ├── 78_For_OF_IN_Each                   # For...of / for...in / forEach placeholder
+│   ├── 78_For_OF_IN_Each.js                # For...of / for...in / forEach placeholder
 │   ├── 79_While_Loop.js                    # While loop basics
 │   ├── 80_Do_While_Loop.js                 # Do...while loop basics
 │   ├── 81_Do_While_Loop.js                 # Do...while loop examples
@@ -189,8 +190,7 @@ LearnPlaywright/
   │   ├── 129_Task_String_Revers.js           # Task: Reverse a string
   │   ├── 130_Task_String_Palindrom.js        # Task: Check if a string is a palindrome
   │   ├── 131_Task_String_Anagram.js          # Task: Check if two strings are anagrams
-  │   ├── javascript_stringcheatsheet.md        # Markdown cheat sheet of all string methods
-  │   └── javascript_stringcheatsheet.html      # Interactive HTML table cheat sheet with search
+  │   └── javascript_stringcheatsheet.md        # Markdown cheat sheet of all string methods
   │
   ├── Chapter_14_Objects/
   │   ├── 132_Objects.js                        # Objects introduction and basics
@@ -258,7 +258,7 @@ LearnPlaywright/
   │   └── tests/                                # Playwright test specs
   │       ├── example.spec.ts
   │       ├── codegen-tta-cart.spec.ts
-  │       └── codegen-tta-cart.spec2.ts
+  │       └── codegen-tta-cart1.spec.ts
   │
   ├── Chapter_20_TypeScript_Basics/
   │   ├── utils.js                              # Named exports (BASE_URL, formatTestName)
@@ -269,38 +269,34 @@ LearnPlaywright/
   │   │   ├── 180_Utils.js                      # Named imports with aliases (as)
   │   │   ├── 181_Logger.js                     # Default import example
   │   │   └── ExplainDefault.md                 # Guide: default vs non-default exports
-  │   └── 02_CLASS_OBJECT/
-  │       ├── 182_CLass_Object.js               # Class basics: attributes and behaviors
-  │       ├── 183_Class_Object2.js              # Constructor and object creation
-  │       ├── 184_Car.js                        # Parameterized constructor with this keyword
-  │       ├── 185_Real_Browser.js               # Real-world TestCase class example
-  │       ├── 186_IQ.js                         # Browser class interview questions
-  │       ├── 187_Public_Private.js             # Public vs private fields (#)
-  │       ├── 188_Static.js                     # Static fields and methods
-  │       ├── 189_Static2.js                    # Static property with constructor
-  │       ├── 190_Task1.js                      # Calculator class task with arithmetic operations
-  │       └── 191_Task2.js                      # Student class with static batch and 10 instances
-  │
+  │   ├── 02_CLASS_OBJECT/
+  │   │   ├── 182_CLass_Object.js               # Class basics: attributes and behaviors
+  │   │   ├── 183_Class_Object2.js              # Constructor and object creation
+  │   │   ├── 184_Car.js                        # Parameterized constructor with this keyword
+  │   │   ├── 185_Real_Browser.js               # Real-world TestCase class example
+  │   │   ├── 186_IQ.js                         # Browser class interview questions
+  │   │   ├── 187_Public_Private.js             # Public vs private fields (#)
+  │   │   ├── 188_Static.js                     # Static fields and methods
+  │   │   ├── 189_Static2.js                    # Static property with constructor
+  │   │   ├── 190_Task1.js                      # Calculator class task with arithmetic operations
+  │   │   └── 191_Task2.js                      # Student class with static batch and 10 instances
   │   ├── 03_ENCAPSULATION/
-  │       ├── 192_Encapsulation.js              # Private fields (#balance) with getters
-  │       ├── 193_Real_Encaps.js                # Private child fields with getter/setter
-  │       ├── 194_Car_Encaps.js                 # Car class with private engine and getter/setter
-  │       └── 195_Bank_Encaps.js               # ICICI bank with authorized balance setter
-  │
+  │   │   ├── 192_Encapsulation.js              # Private fields (#balance) with getters
+  │   │   ├── 193_Real_Encaps.js                # Private child fields with getter/setter
+  │   │   ├── 194_Car_Encaps.js                 # Car class with private engine and getter/setter
+  │   │   └── 195_Bank_Encaps.js               # ICICI bank with authorized balance setter
   │   ├── 04_INHERITANCE/
-  │       ├── 196_Single_Inheritance.js         # BasePage → LoginPage single inheritance
-  │       ├── 197_Single_Inheritance2.js        # Animal → Dog with super() constructor
-  │       ├── 198_Single_Inheritance_Con.js     # Method overriding in BaseTest → APITest
-  │       ├── 199_IQ.js                         # super.setUp() and super.teardown() usage
-  │       ├── 200_IQ.js                         # Runtime polymorphism with TestCase subclasses
-  │       ├── 201_Real_Page_Object_Model.js     # POM pattern with BasePage and page classes
-  │       ├── 202_Multiple_Inheritance.js       # Why JS doesn't support multiple inheritance
-  │       ├── 203_Multilevel_Inheritance.js     # BasePage → AuthPage → AdminPage chain
-  │       └── 204_Heirarichal_Inheritance.js   # Hierarchical inheritance structure
-  │
+  │   │   ├── 196_Single_Inheritance.js         # BasePage → LoginPage single inheritance
+  │   │   ├── 197_Single_Inheritance2.js        # Animal → Dog with super() constructor
+  │   │   ├── 198_Single_Inheritance_Con.js     # Method overriding in BaseTest → APITest
+  │   │   ├── 199_IQ.js                         # super.setUp() and super.teardown() usage
+  │   │   ├── 200_IQ.js                         # Runtime polymorphism with TestCase subclasses
+  │   │   ├── 201_Real_Page_Object_Model.js     # POM pattern with BasePage and page classes
+  │   │   ├── 202_Multiple_Inheritance.js       # Why JS doesn't support multiple inheritance
+  │   │   ├── 203_Multilevel_Inheritance.js     # BasePage → AuthPage → AdminPage chain
+  │   │   └── 204_Heirarichal_Inheritance.js   # Hierarchical inheritance structure
   │   ├── 05_POLYMORPHISM/
-  │       └── 205_Method_Overriding.js          # Method overriding in APITest extending BaseTest
-  │
+  │   │   └── 205_Method_Overriding.js          # Method overriding in APITest extending BaseTest
   │   └── INTERVIEW_QUESTION/
   │       ├── EX1.js                            # Bug class with severity display
   │       ├── EX2.js                            # Environment class with default parameters
@@ -416,9 +412,7 @@ Master JavaScript strings — one of the most frequently used data types in test
 - **Conversion & Format Methods:** `toString()`, `valueOf()`, `toLocaleUpperCase()`, `toLocaleLowerCase()`, `Symbol.iterator`
 - **Static Methods:** `String.fromCharCode()`, `String.fromCodePoint()`, `String.raw()`
 - **Practical Tasks:** String reversal, palindrome checker, and anagram checker
-- **Cheat Sheets:** 
-  - [`javascript_stringcheatsheet.md`](./Chapter_13_Strings/javascript_stringcheatsheet.md) — Markdown reference table
-  - [`javascript_stringcheatsheet.html`](./Chapter_13_Strings/javascript_stringcheatsheet.html) — Interactive searchable HTML table
+- **Cheat Sheet:** [`javascript_stringcheatsheet.md`](./Chapter_13_Strings/javascript_stringcheatsheet.md) — Markdown reference table
 
 **Key takeaways:**
 - Strings are immutable — all methods return new strings, never modify the original
@@ -779,6 +773,7 @@ Master the art of naming variables and functions:
   - `SCREAMING_SNAKE_CASE` — used for constants (`MAX_SIZE`)
   - `kebab-case` — used in HTML/CSS (`my-variable-name`)
 - **Comments:** Single-line (`//`), multi-line (`/* */`), and JSDoc-style comments
+- **Reference Guide:** [`09_Literals_Identifiers_Keywords.md`](./Chapter_03_Identifier_Literals/09_Literals_Identifiers_Keywords.md) — Complete markdown reference for identifiers, literals, and reserved keywords
 - **VS Code Shortcuts:** Comprehensive keyboard shortcut references for both Windows and macOS to boost productivity
 
 ### Chapter 04 — JavaScript Concepts
