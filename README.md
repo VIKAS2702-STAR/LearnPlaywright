@@ -310,7 +310,20 @@ LearnPlaywright/
   ├── interview.md                              # JavaScript interview questions and answers
   ├── index.html                                # API Login endpoint reference page
   ├── sdetlive.pdf                              # SDET learning reference PDF
-  └── string-cheat-sheet.html                   # Standalone string methods cheat sheet
+  ├── string-cheat-sheet.html                   # Standalone string methods cheat sheet
+  ├── Chapter_30_Public_Private_Protected/
+  │   ├── 231_Pub_Priv_Prot.ts                  # Public, private, protected access modifiers
+  │   ├── 232_Page_Object_Model.ts              # Protected members in POM (inheritance)
+  │   ├── 233_Readonly.ts                       # Readonly properties in config class
+  │   └── 234_Abstract_Class.ts                 # Abstract class with abstract methods
+  │
+  └── Chapter_31_Type_Override_Decorators/
+      ├── 235_Type_AS.ts                        # Type assertion for unknown objects (as keyword)
+      ├── 236_Type_Alias_AS.ts                  # Type alias assertion for API responses
+      ├── 237_Type_Override.ts                  # Method override with `override` keyword
+      ├── 238_IQ.ts                             # Override interview question (inheritance)
+      ├── 239_Decorator.ts                      # Method decorator (logging args)
+      └── 240_Decorator2.ts                     # Method decorator (generic wrapper pattern)
   ```
 
 ### Chapter 10 — Loops
@@ -674,6 +687,46 @@ Practice common OOP and class-based interview questions that test understanding 
 
 ---
 
+### Chapter 30 — Public, Private, Protected & Readonly in TypeScript
+Master TypeScript access modifiers and abstract classes — essential for building robust, maintainable automation frameworks. This section covers how to control visibility and enforce immutability in your classes.
+
+- **Public, Private, Protected:** Controlling member visibility in classes
+  - `231_Pub_Priv_Prot.ts` — `public baseURL`, `private apiKey`, `protected timeout` with inheritance
+- **Protected in POM:** Using `protected` for shared page methods in Page Object Model
+  - `232_Page_Object_Model.ts` — `BasePage.navigate()` as protected, called by `LoginPage`
+- **Readonly Properties:** Immutable fields that cannot be reassigned after construction
+  - `233_Readonly.ts` — `PlaywrightConfig` with `readonly baseURL`, `timeout`, and `retries`
+- **Abstract Classes:** Blueprints with abstract methods that child classes must implement
+  - `234_Abstract_Class.ts` — `BaseTest` with abstract `setup()`, `execute()`, `teardown()`, `loan()`
+
+**Key takeaways:**
+- `public` members are accessible everywhere (default)
+- `private` members are only accessible within the declaring class
+- `protected` members are accessible within the class and its subclasses
+- `readonly` prevents reassignment after initialization — perfect for config objects
+- Abstract classes define contracts that subclasses must fulfill
+
+### Chapter 31 — Type Override & Decorators
+Learn TypeScript's type assertion (`as`), the `override` keyword for safe method overrides, and decorators for aspect-oriented programming — adding logging, validation, and cross-cutting concerns to your code.
+
+- **Type Assertion (`as`):** Casting `unknown` types to specific interfaces for safe access
+  - `235_Type_AS.ts` — casting an `unknown` element object to `elementI` interface
+  - `236_Type_Alias_AS.ts` — casting `unknown` API response to `userResponse` type
+- **Override Keyword:** Safer method overriding with TypeScript's `override` keyword
+  - `237_Type_Override.ts` — `LoginTest` and `APITest` override `BaseTest.setup()` with `override`
+  - `238_IQ.ts` — `Vikas` overrides `Father.home()` using the `override` keyword
+- **Decorators:** Function-based decorators for wrapping and extending behavior
+  - `239_Decorator.ts` — `@Log` decorator that logs method name and arguments before execution
+  - `240_Decorator2.ts` — `@logged` generic decorator wrapper returning a replacement function
+
+**Key takeaways:**
+- Type assertion (`as`) is compile-time only — no runtime type checking
+- The `override` keyword helps catch typos when overriding methods
+- Decorators are functions that wrap/extend the behavior of methods at design time
+- Decorators enable clean separation of cross-cutting concerns (logging, auth, tracing)
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -976,6 +1029,12 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Page Object Model (POM) | Real-world POM pattern using inheritance for Playwright automation |
 | Method Chaining | Fluent APIs by returning `this` from methods |
 | OOP Interview Questions | Constructors, defaults, encapsulation, and chaining practice |
+| Public, Private, Protected | TypeScript access modifiers for class member visibility |
+| Readonly Properties | Immutable fields in TypeScript config classes |
+| Abstract Classes | Blueprints with abstract methods that subclasses must implement |
+| Type Assertion (`as`) | Casting unknown types to interfaces at compile time |
+| Override Keyword | Safe method override pattern in TypeScript |
+| Decorators | Aspect-oriented programming with method decorators for logging and wrappers |
 
 ---
 
@@ -1010,6 +1069,8 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
       - **Section 04** → Inheritance — single, multilevel, hierarchical, and method overriding with `super()`
       - **Section 05** → Polymorphism and method overriding for extensible code
       - **Interview Questions** → Practice constructors, defaults, method chaining, and OOP scenarios
+  22. **Chapter 30** → Master TypeScript access modifiers (`public`, `private`, `protected`, `readonly`) and abstract classes for building robust automation frameworks
+  23. **Chapter 31** → Master TypeScript type assertion (`as`), method override with `override` keyword, and decorators for aspect-oriented programming
 
 ---
 
