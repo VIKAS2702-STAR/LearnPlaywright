@@ -2,13 +2,12 @@ function logged( originalMethod: any, context: any ): any {
     return function ( this: any, ...args: any[] ): any {
         console.log( "Called Decorator" );
         return originalMethod.call( this, ...args );
-    };
+    }
 }
-
 class Greeter {
     @logged
     hello(): string {
-        return "HI";
+        return "Hi";
     }
 }
 

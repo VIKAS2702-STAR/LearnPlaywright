@@ -324,6 +324,15 @@ LearnPlaywright/
       ├── 238_IQ.ts                             # Override interview question (inheritance)
       ├── 239_Decorator.ts                      # Method decorator (logging args)
       └── 240_Decorator2.ts                     # Method decorator (generic wrapper pattern)
+
+  └── Chapter_32_Playwright_Fundamentals/
+      ├── .gitignore                              # Playwright ignore rules
+      ├── package.json                            # Playwright setup and dependencies
+      ├── package-lock.json                       # Lockfile for reproducible installs
+      ├── playwright.config.ts                    # Playwright test configuration
+      ├── tsconfig.json                           # TypeScript configuration
+      └── tests/                                  # Playwright test specs
+          └── example.spec.ts
   ```
 
 ### Chapter 10 — Loops
@@ -727,6 +736,24 @@ Learn TypeScript's type assertion (`as`), the `override` keyword for safe method
 
 ---
 
+### Chapter 32 — Playwright Fundamentals
+A fresh Playwright automation project setup with TypeScript. This chapter provides a clean foundation for writing Playwright tests with modern configuration, type safety, and scalable test organization.
+
+- **Project Setup:** Playwright installation with `@playwright/test`, TypeScript configuration, and `playwright.config.ts`
+- **Test Configuration:** `playwright.config.ts` with Chromium-only project, HTML reporter, trace-on-retry, fully parallel mode, and CI retry support
+- **Test Specs:** TypeScript test file using `test` and `expect` from Playwright's test runner
+- **Current Tests:**
+  - `example.spec.ts` — verifies the page title of TTA Cart login page (`"TTACart - Login"`) using `page.goto()` and `expect(page).toHaveTitle()`
+
+**Key takeaways:**
+- Playwright tests are async by nature — use `async/await` with page actions
+- `playwright.config.ts` controls browsers, parallelism, retries, and reporters
+- HTML reporter provides visual test reports after execution
+- Clean TypeScript setup enables strong typing for page locators and assertions
+- This chapter serves as the first standalone Playwright chapter covering foundational project setup
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -1035,6 +1062,10 @@ Learn how to capture user input in Node.js applications. Covers basic input conc
 | Type Assertion (`as`) | Casting unknown types to interfaces at compile time |
 | Override Keyword | Safe method override pattern in TypeScript |
 | Decorators | Aspect-oriented programming with method decorators for logging and wrappers |
+| Playwright Project Setup | Fresh TypeScript Playwright project with config, test runner, and TypeScript support |
+| Playwright Test Configuration | `playwright.config.ts` with Chromium project, HTML reporter, parallel mode, and CI retries |
+| Playwright Test Specs | TypeScript test files with `test`, `expect`, `page`, and async/await |
+| Playwright Page Title Assertion | Verifying page titles with `expect(page).toHaveTitle()` |
 
 ---
 
@@ -1071,6 +1102,7 @@ If you are new to JavaScript or preparing for QA automation, follow this order:
       - **Interview Questions** → Practice constructors, defaults, method chaining, and OOP scenarios
   22. **Chapter 30** → Master TypeScript access modifiers (`public`, `private`, `protected`, `readonly`) and abstract classes for building robust automation frameworks
   23. **Chapter 31** → Master TypeScript type assertion (`as`), method override with `override` keyword, and decorators for aspect-oriented programming
+24. **Chapter 32** → Playwright fundamentals — set up a fresh Playwright project with TypeScript, configure browsers and reporters, and write your first test spec with async/await
 
 ---
 
